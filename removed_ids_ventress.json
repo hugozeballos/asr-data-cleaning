@@ -1,0 +1,76 @@
+{
+  "fold_1": [
+    "train_1097",
+    "train_527",
+    "validate_461",
+    "train_1980",
+    "train_1670",
+    "train_1681",
+    "train_1777",
+    "train_134",
+    "train_1846",
+    "train_1436",
+    "train_2096"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_1738",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_650",
+    "train_1175",
+    "train_246",
+    "validate_15",
+    "train_2576"
+  ],
+  "fold_3": [
+    "train_1068",
+    "train_220",
+    "train_535",
+    "train_1650"
+  ],
+  "fold_4": [
+    "train_2562",
+    "train_1904",
+    "train_2757",
+    "train_1866"
+  ],
+  "fold_5": [
+    "train_1656",
+    "train_1732",
+    "train_150",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1083",
+    "train_305",
+    "train_1143",
+    "train_1776"
+  ],
+  "fold_7": [
+    "train_738",
+    "train_1939",
+    "train_943",
+    "validate_664"
+  ],
+  "fold_8": [
+    "train_5",
+    "train_2857",
+    "train_716",
+    "train_1549"
+  ],
+  "fold_9": [
+    "train_2395",
+    "validate_593",
+    "train_1296",
+    "validate_311"
+  ],
+  "fold_10": [
+    "train_1603",
+    "train_1434",
+    "validate_546",
+    "train_1585"
+  ]
+}

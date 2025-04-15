@@ -1,0 +1,47 @@
+# 🗃️ Caches y carpetas temporales
+Hugginsface_cache/
+datasets_cache/
+pip_cache/
+__pycache__/
+*.pyc
+.cache/
+*.tmp
+*.jsonl
+
+# 🧪 Experiment tracking y modelos
+mlruns/
+*.pt
+*.ckpt
+*.bin
+*.zip
+
+# 🔊 Archivos de audio pesados
+*.flac
+*.wav
+*.mp3
+
+# 🧾 Archivos de SLURM y logs
+*.err
+*.out
+*.log
+
+# 📦 Carpetas de modelos entrenados
+whisper-finetuned*/
+whisper.zip
+
+# 💾 Archivos de respaldo
+*.save
+*.save.*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.env/
+.venv/
+env/
+venv/
+
+# Editor/IDE
+.vscode/
+
