@@ -38,7 +38,7 @@ with open(job_script, "w") as f:
 #SBATCH --partition={partition}
 #SBATCH --gres=gpu:{gpu_type}:{gpus}
 #SBATCH --mem={memory}
-#SBATCH --time=2-20:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --ntasks={ntasks}
 #SBATCH --cpus-per-task={cpus_per_task}
 
