@@ -57,7 +57,7 @@ export CUDA_LAUNCH_BLOCKING=1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 # Run training
-srun torchrun \\
+torchrun \\
   --nnodes=1 \\
   --nproc_per_node={gpus} \\
   --rdzv_backend=static \\
