@@ -1,93 +1,122 @@
+"""
+train.py
+
+Main training script for Whisper-based ASR model using 10-fold cross-validation.
+For each fold, it filters samples based on CER and logs metrics to MLflow.
+
+All configuration (model name, output paths, experiment name, etc.) is loaded
+from a single JSON file: `experiment_config.json`.
+
+Author: [CENIA]
+"""
+
 import json
 import os
 import mlflow
 import torch
-from tqdm.auto import tqdm
-from transformers import Seq2SeqTrainer, EarlyStoppingCallback
-from tqdm.auto import tqdm
-from model import load_model
-from dataset import load_datasets, prepare_dataset, prepare_dataset_for_cross_validation, DataCollatorSpeechSeq2SeqWithPadding
-from config import training_args
-from utils import compute_metrics, compute_cer_sample, validate_and_filter, infer_batch
 import numpy as np
+from tqdm.auto import tqdm
+from transformers import Seq2SeqTrainer
 
-def train():
-    """Función principal para entrenar el modelo."""
-    model, processor = load_model()
-    train_dataset, val_dataset = load_datasets()
+from model import load_model
+from dataset import (
+    load_datasets,
+    prepare_dataset,
+    prepare_dataset_for_cross_validation,
+    DataCollatorSpeechSeq2SeqWithPadding,
+)
+from config import get_training_args
 
+from utils import (
+    compute_metrics,
+    validate_and_filter,
+)
 
-    # 🔹 **Usar un dataset reducido (Ejemplo: 20 muestras) para pruebas**
-    full_dataset, folds = prepare_dataset_for_cross_validation(sample_size=20)
+training_args = get_training_args(cfg)
+def train(cfg):
+    """
+    Main training function. Performs cross-validation training with data filtering
+    based on CER, and tracks results in MLflow.
+    """
+    # Load model and processor as specified in the config
+    model, processor = load_model(cfg)
+    #train_dataset, val_dataset = load_datasets()
 
+    # Generate dataset folds (10-fold cross-validation)
+    full_dataset, folds = prepare_dataset_for_cross_validation(cfg)
 
     removed_ids = set()
+    checkpoint_file = cfg["json_output"]
 
-    checkpoint_file = "removed_ids_hydra_large.json"
-
+    # Load existing checkpoint to continue from a previous run
     if os.path.exists(checkpoint_file):
         with open(checkpoint_file, "r") as f:
             checkpoint = json.load(f)
-        # Cargar todos los IDs filtrados de todos los folds previos en el set
         for key in checkpoint.keys():
             removed_ids.update(checkpoint[key])
 
-
-
-    # Inicializar variables para determinar el fold de inicio
+    # Determine the starting fold based on completed checkpoints
     if os.path.exists(checkpoint_file):
         with open(checkpoint_file, "r") as f:
             checkpoint = json.load(f)
-        # Extraemos los números de fold completados (se asume formato "fold_1", "fold_2", etc.)
-        completed_folds = [int(key.split("")[1]) for key in checkpoint.keys() if key.startswith("fold")]
+        completed_folds = [
+            int(key.split("_")[1])
+            for key in checkpoint.keys()
+            if key.startswith("fold")
+        ]
         if completed_folds:
             start_fold = max(completed_folds)
-            print(f"Reanudando desde fold {start_fold + 1}")
+            print(f"🔁 Resuming from fold {start_fold + 1}")
         else:
             start_fold = 0
     else:
         start_fold = 0
         checkpoint = {}
-        print("No se encontró checkpoint. Iniciando desde el fold 1")
+        print("🚀 No checkpoint found. Starting from fold 1")
 
+    # 🔄 Cross-validation loop (10 folds)
+    for fold_idx in tqdm(range(10), desc="🔄 Cross-validation Progress"):
+        print(f"\n📁 Fold {fold_idx+1}/10 - Using it as validation set")
 
-
-    # 🔹 **Validación Cruzada - 10 folds**
-    for fold_idx in tqdm(range(10), desc="🔄 Progreso de Validación Cruzada"):
-        print(f"\n🔄 Fold {fold_idx+1}/10 - Validación en Fold {fold_idx+1}")
-
-        # Seleccionar índices para validación y entrenamiento según los folds originales
+        # Define train and validation indices
         val_indices = folds[fold_idx]
-        train_indices = np.concatenate([folds[i] for i in range(10) if i != fold_idx])
+        train_indices = np.concatenate(
+            [folds[i] for i in range(10) if i != fold_idx]
+        )
 
-        # Primero, seleccionar el subconjunto del dataset original según los índices
+        # Subset the original dataset accordingly
         train_subset = full_dataset.select(train_indices)
         val_subset = full_dataset.select(val_indices)
 
-
-        # Preparar datasets
+        # Data collator for dynamic padding
         data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
-        # Luego, aplicar el preprocesamiento para convertir los datos (preparar el dataset)
-        print("⚙️ Preprocesando train_subset...")
-        train_subset = train_subset.map(lambda batch: prepare_dataset(batch, processor),
-                                    remove_columns=["audio_bytes"],
-                                    num_proc=1, desc="Preprocesando Train")
-        print("⚙️ Preprocesando val_subset...")
-        val_subset = val_subset.map(lambda batch: prepare_dataset(batch, processor),
-                                    remove_columns=["audio_bytes"],
-                                    num_proc=1, desc="Preprocesando Val")
+        # Preprocess datasets
+        print("⚙️ Preprocessing train_subset...")
+        train_subset = train_subset.map(
+            lambda batch: prepare_dataset(batch, processor),
+            remove_columns=["audio_bytes"],
+            num_proc=1,
+            desc="Preprocessing Train"
+        )
+        print("⚙️ Preprocessing val_subset...")
+        val_subset = val_subset.map(
+            lambda batch: prepare_dataset(batch, processor),
+            remove_columns=["audio_bytes"],
+            num_proc=1,
+            desc="Preprocessing Val"
+        )
 
-        # Finalmente, filtrar los ejemplos que ya han sido eliminados (según los IDs)
+        # Remove previously filtered samples
         train_subset = train_subset.filter(lambda x: x["id"] not in removed_ids, num_proc=1)
         val_subset = val_subset.filter(lambda x: x["id"] not in removed_ids, num_proc=1)
 
         torch.cuda.empty_cache()
 
-        print(f"🔹 Train: {len(train_subset)} ejemplos")
-        print(f"🔹 Val: {len(val_subset)} ejemplos")
+        print(f"📊 Train samples: {len(train_subset)}")
+        print(f"📊 Validation samples: {len(val_subset)}")
 
-        # Definir Trainer
+        # Initialize Hugging Face Trainer
         trainer = Seq2SeqTrainer(
             model=model,
             args=training_args,
@@ -96,27 +125,34 @@ def train():
             tokenizer=processor.feature_extractor,
             data_collator=data_collator,
             compute_metrics=lambda pred: compute_metrics(pred, processor)
-            #remove_unused_columns=False,
             #callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
         )
 
-        print(f"\n🚀 Entrenando en Fold {fold_idx+1} con {len(train_subset)} ejemplos...")
+        print(f"\n🏋️ Training on Fold {fold_idx+1}...")
         mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
-        mlflow.set_experiment("whisper-validate-data-large")
-        with tqdm(total=training_args.num_train_epochs, desc=f"🏋️ Entrenando Fold {fold_idx+1}") as pbar:
+        mlflow.set_experiment(cfg["mlflow_experiment"])
+
+        # Run training and log progress with tqdm
+        with tqdm(total=training_args.num_train_epochs, desc=f"🏋️ Fold {fold_idx+1}") as pbar:
             trainer.train()
-            pbar.update(1)  # Avanzar en tqdm
+            pbar.update(1)
+
         mlflow.end_run()
-
         torch.cuda.empty_cache()
-        # Inferencia y filtrado: la función validate_and_filter devuelve una lista de IDs a eliminar para este fold
-        new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx)
 
-        # Actualizar el conjunto de IDs eliminados
+        # Run validation + filtering based on CER
+        new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx, cfg)
+
+        # Update the global set of removed IDs
         removed_ids.update(new_removed_ids)
 
-        # Mostrar el JSON con los IDs eliminados hasta el momento (si se guarda en un archivo, también se podría imprimir)
-        print("IDs eliminados hasta ahora:", list(removed_ids))
+        # Delete checkpoints
+        checkpoints_dir = cfg.get("output_dir", "./results")
+        if os.path.exists(checkpoints_dir):
+            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}...")
+            shutil.rmtree(checkpoints_dir)
+
+        print("🧹 Removed IDs so far:", list(removed_ids))
 
 
 if __name__ == "__main__":

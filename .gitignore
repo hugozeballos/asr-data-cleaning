@@ -7,6 +7,7 @@ __pycache__/
 .cache/
 *.tmp
 *.jsonl
++.zip
 
 # 🧪 Experiment tracking y modelos
 mlruns/
@@ -21,9 +22,7 @@ mlruns/
 *.mp3
 
 # 🧾 Archivos de SLURM y logs
-*.err
 *.out
-*.log
 
 # 📦 Carpetas de modelos entrenados
 whisper-finetuned*/
