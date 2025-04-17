@@ -1,0 +1,33 @@
+# === SLURM Cluster Info ===
+# Partitions and Nodes status as of $(date):
+# (sinfo output)
+# 
+# PARTITION    AVAIL  TIMELIMIT  NODES  STATE NODELIST
+# ialab-low*     up    4-00:00:00   1    mix  ahsoka
+# ialab-high     up    8-00:00:00   4    mix/unk  hydra,scylla,yodaxico,grievous
+# ialab-eph      up    1-00:00:00   1    idle ventress
+# diplomado      up    1-00:00:00   2    mix/unk  ahsoka,grievous
+# all            up    1-00:00:00   6    mix/unk/idle  ahsoka,hydra,scylla,yodaxico,grievous,ventress
+#
+# ===========================
+
+########################################
+# 🖥️ Cluster GPU Nodes Summary (2025)
+#
+# Nodo       | GPU disponible   | Slurm Reference  | # GPUs
+# -----------|------------------|------------------|-------
+# ahsoka     | RTX 2080 Ti       | rtx_2080_ti       | 1
+# hydra      | TITAN RTX         | titan_rtx         | 2
+# scylla     | TITAN RTX         | titan_rtx         | 2
+# yodaxico   | TITAN RTX         | titan_rtx         | 2
+# grievous   | Tesla V100 (?)    | tesla_v100        | 2 (por confirmar)
+# ventress   | No GPU disponible | (N/A)             | 0
+#
+# 🔹 Ejemplos de uso en Slurm:
+#   #SBATCH --gres=gpu:titan_rtx:2   # (hydra, scylla, yodaxico)
+#   #SBATCH --gres=gpu:rtx_2080_ti:1 # (ahsoka)
+#   #SBATCH --gres=gpu:tesla_v100:2  # (grievous) [verificar GPU exacta]
+#
+# 🔹 Para fijar un nodo específico:
+#   #SBATCH --nodelist=hydra
+########################################
