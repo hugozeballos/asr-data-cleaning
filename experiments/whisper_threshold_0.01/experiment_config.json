@@ -14,13 +14,13 @@
     "json_output": "experiments/whisper_threshold_0.01/removed_ids.json",
     "mlflow_experiment": "whisper_threshold_0.01",
   
-    "batch_size": 4,
+    "batch_size": 2,
     "epochs": 1,
     "learning_rate": 5e-5,
     
     "gpus": 2,
-    "gpu_type": "titan_rtx",
-    "partition": "ialab-high",
+    "gpu_type": "2080_super",
+    "partition": "ialab-eph",
     "ntasks": 2,
     "cpus_per_task": 4
   }

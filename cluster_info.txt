@@ -21,7 +21,7 @@
 # scylla     | TITAN RTX         | titan_rtx         | 2
 # yodaxico   | TITAN RTX         | titan_rtx         | 2
 # grievous   | Tesla V100 (?)    | tesla_v100        | 2 (por confirmar)
-# ventress   | No GPU disponible | (N/A)             | 0
+# ventress   | No GPU disponible | 2080_super        | 0
 #
 # 🔹 Ejemplos de uso en Slurm:
 #   #SBATCH --gres=gpu:titan_rtx:2   # (hydra, scylla, yodaxico)
