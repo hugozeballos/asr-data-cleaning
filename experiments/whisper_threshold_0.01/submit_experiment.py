@@ -22,7 +22,7 @@ cpus_per_task = cfg["cpus_per_task"]
 memory = cfg.get("memory", "32G")  # Default to 32G
 
 # 4️⃣ Define paths
-exp_dir = os.path.join("experiments", run_name)
+exp_dir = os.getcwd()  # Usa el directorio actual donde está parado
 logs_dir = os.path.join(exp_dir, "logs")
 job_script = os.path.join(exp_dir, "job.sh")
 
