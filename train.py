@@ -32,12 +32,14 @@ from utils import (
     validate_and_filter,
 )
 
-training_args = get_training_args(cfg)
 def train(cfg):
     """
     Main training function. Performs cross-validation training with data filtering
     based on CER, and tracks results in MLflow.
     """
+    # Load config
+    training_args = get_training_args(cfg)
+
     # Load model and processor as specified in the config
     model, processor = load_model(cfg)
     #train_dataset, val_dataset = load_datasets()
