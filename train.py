@@ -32,6 +32,9 @@ from utils import (
     validate_and_filter,
 )
 
+# Is the rank 0 this process?
+is_master = int(os.environ.get("LOCAL_RANK", 0)) == 0
+
 def train(cfg):
     """
     Main training function. Performs cross-validation training with data filtering
@@ -133,6 +136,8 @@ def train(cfg):
         print(f"\n🏋️ Training on Fold {fold_idx+1}...")
         mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
         mlflow.set_experiment(cfg["mlflow_experiment"])
+        mlflow.start_run(run_name=f"fold_{fold_idx+1}")
+
 
         # Run training and log progress with tqdm
         with tqdm(total=training_args.num_train_epochs, desc=f"🏋️ Fold {fold_idx+1}") as pbar:
