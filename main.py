@@ -1,8 +1,8 @@
 import multiprocessing as mp
 import os
+import json
 import argparse
-from utils import load_experiment_config
-from train import train
+from train import train  
 
 if __name__ == "__main__":
     # 🔹 Parse command-line arguments
@@ -10,8 +10,9 @@ if __name__ == "__main__":
     parser.add_argument("--config_path", type=str, required=True, help="Path to the experiment_config.json")
     args = parser.parse_args()
 
-    # 🔹 Load the experiment configuration
-    cfg = load_experiment_config(args.config_path)
+    # 🔹 Load the experiment configuration manually
+    with open(args.config_path) as f:
+        cfg = json.load(f)
 
     # 🔹 Create output directories if they don't exist
     output_dir = os.path.join("experiments", cfg["run_name"])
