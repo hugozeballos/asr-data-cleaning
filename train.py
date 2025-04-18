@@ -32,9 +32,6 @@ from utils import (
     validate_and_filter,
 )
 
-# Is the rank 0 this process?
-is_master = int(os.environ.get("LOCAL_RANK", 0)) == 0
-
 def train(cfg):
     """
     Main training function. Performs cross-validation training with data filtering
