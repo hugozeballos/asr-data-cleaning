@@ -87,21 +87,7 @@ def load_datasets():
     return train_dataset, val_dataset
 
 
-def load_experiment_config(path="experiment_config.json"):
-    """
-    Loads experiment configuration from a local JSON file.
-
-    Args:
-        path (str): Path to the JSON config.
-
-    Returns:
-        dict: Parsed configuration.
-    """
-    with open(path) as f:
-        return json.load(f)
-
-
-def prepare_dataset_for_cross_validation():
+def prepare_dataset_for_cross_validation(cfg):
     """
     Loads and merges train/validation sets, assigns original IDs,
     and splits into 10 folds for cross-validation.
@@ -113,7 +99,6 @@ def prepare_dataset_for_cross_validation():
         full_dataset (Dataset): Preprocessed dataset with 'original_id' column.
         folds (List[np.array]): List of 10 arrays with fold indices.
     """
-    cfg = load_experiment_config()
     mode = cfg.get("mode", "full")
 
     # Load complete train + validation set
