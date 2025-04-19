@@ -160,7 +160,7 @@ def validate_and_filter(model, processor, val_subset, fold_idx, cfg):
         raise ValueError(f"Unsupported filtering strategy: {strategy}")
 
     # Save filtered IDs to JSON log
-    log_file = cfg["json_log"]
+    log_file = cfg["json_output"]
     try:
         with open(log_file, "r") as f:
             removed_ids_overall = json.load(f)
