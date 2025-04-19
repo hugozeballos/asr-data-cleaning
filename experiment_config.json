@@ -20,8 +20,8 @@
     "learning_rate": 5e-5,
     
     "gpus": 2,
-    "gpu_type": "rtx_2080_ti",
-    "partition": "ialab-high",
+    "gpu_type": "2080_super",
+    "partition": "ialab-eph",
     "ntasks": 2,
     "cpus_per_task": 4
   }
