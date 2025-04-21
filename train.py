@@ -9,7 +9,7 @@ from a single JSON file: `experiment_config.json`.
 
 Author: [CENIA]
 """
-
+import shutil
 import json
 import os
 import mlflow
