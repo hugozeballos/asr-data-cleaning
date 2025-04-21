@@ -3,7 +3,7 @@
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
-    "model_name": "openai/whisper-small",
+    "model_name": "openai/whisper-tiny",
     
     "mode": "full", 
     
@@ -15,7 +15,7 @@
     "mlflow_experiment": "whisper_threshold_0.01",
     
   
-    "batch_size": 2,
+    "batch_size": 4,
     "epochs": 1,
     "learning_rate": 5e-5,
     
