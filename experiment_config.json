@@ -5,7 +5,7 @@
     
     "model_name": "openai/whisper-small",
     
-    "mode": "debug", 
+    "mode": "full", 
     
     "filtering_strategy": "threshold",
     "filtering_threshold": 0.01,
