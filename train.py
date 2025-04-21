@@ -154,7 +154,7 @@ def train(cfg):
         checkpoints_dir = cfg.get("output_dir", "./results")
         if os.path.exists(checkpoints_dir):
             print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}...")
-            shutil.rmtree(checkpoints_dir)
+            shutil.rmtree(checkpoints_dir, ignore_errors=True)
 
         print("🧹 Removed IDs so far:", list(removed_ids))
 
