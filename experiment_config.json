@@ -15,13 +15,13 @@
     "mlflow_experiment": "whisper_tiny_threshold_0.1",
     
   
-    "batch_size": 4,
+    "batch_size": 8,
     "epochs": 1,
     "learning_rate": 5e-5,
     
     "gpus": 2,
-    "gpu_type": "2080_super",
-    "partition": "ialab-eph",
+    "gpu_type": "titan_rtx",
+    "partition": "ialab-high",
     "ntasks": 2,
     "cpus_per_task": 4
   }
