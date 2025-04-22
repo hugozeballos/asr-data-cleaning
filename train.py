@@ -26,6 +26,10 @@ from dataset import (
     DataCollatorSpeechSeq2SeqWithPadding,
 )
 from config import get_training_args
+from transformers.integrations import MLflowCallback
+from transformers import Seq2SeqTrainer, EarlyStoppingCallback
+
+
 
 from utils import (
     compute_metrics,
@@ -75,6 +79,8 @@ def train(cfg):
         start_fold = 0
         checkpoint = {}
         print("🚀 No checkpoint found. Starting from fold 1")
+
+    
 
     # 🔄 Cross-validation loop (10 folds)
     for fold_idx in tqdm(range(10), desc="🔄 Cross-validation Progress"):
@@ -126,8 +132,8 @@ def train(cfg):
             eval_dataset=val_subset,
             tokenizer=processor.feature_extractor,
             data_collator=data_collator,
-            compute_metrics=lambda pred: compute_metrics(pred, processor)
-            #callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+            compute_metrics=lambda pred: compute_metrics(pred, processor),
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=3), MLflowCallback()]
         )
 
         print(f"\n🏋️ Training on Fold {fold_idx+1}...")
