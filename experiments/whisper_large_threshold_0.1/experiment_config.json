@@ -1,0 +1,27 @@
+{
+    "run_name": "whisper_large_threshold_0.1",
+    
+    "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
+    
+    "model_name": "openai/whisper-large-v3-turbo",
+    
+    "mode": "full", 
+    
+    "filtering_strategy": "threshold",
+    "filtering_threshold": 0.1,
+    
+    "output_dir": "experiments/whisper_large_threshold_0.1/checkpoints",
+    "json_output": "experiments/whisper_large_threshold_0.1/removed_ids.json",
+    "mlflow_experiment": "whisper_large_threshold_0.1",
+    
+  
+    "batch_size": 2,
+    "epochs": 1,
+    "learning_rate": 5e-5,
+    
+    "gpus": 2,
+    "gpu_type": "titan_rtx",
+    "partition": "ialab-high",
+    "ntasks": 2,
+    "cpus_per_task": 4
+  }

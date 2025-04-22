@@ -1,0 +1,2953 @@
+🚀 Running experiment in: experiments/whisper_large_threshold_0.1
+🚀 Running experiment in: experiments/whisper_large_threshold_0.1
+📦 Loading model from: openai/whisper-large-v3-turbo
+📦 Loading model from: openai/whisper-large-v3-turbo
+🚀 FULL mode: Using entire dataset of 3663 examples.
+🚀 FULL mode: Using entire dataset of 3663 examples.
+🚀 No checkpoint found. Starting from fold 1🚀 No checkpoint found. Starting from fold 1
+
+
+📁 Fold 1/10 - Using it as validation set
+
+📁 Fold 1/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3294
+📊 Validation samples: 366
+
+🏋️ Training on Fold 1...
+📊 Train samples: 3294
+📊 Validation samples: 366
+
+🏋️ Training on Fold 1...
+{'loss': 5.0259, 'grad_norm': 390.5821228027344, 'learning_rate': 4.951456310679612e-05, 'epoch': 0.02}
+{'loss': 3.9471, 'grad_norm': 21.34035873413086, 'learning_rate': 4.830097087378641e-05, 'epoch': 0.05}
+{'loss': 1.1132, 'grad_norm': 17.031856536865234, 'learning_rate': 4.7087378640776703e-05, 'epoch': 0.07}
+{'loss': 0.5749, 'grad_norm': 7.268060207366943, 'learning_rate': 4.5873786407766997e-05, 'epoch': 0.1}
+{'eval_loss': 0.42781075835227966, 'eval_wer': 35.73087323047559, 'eval_cer': 14.339450239853804, 'eval_runtime': 293.1373, 'eval_samples_per_second': 1.249, 'eval_steps_per_second': 0.078, 'epoch': 0.1}
+{'loss': 0.3875, 'grad_norm': 6.569910049438477, 'learning_rate': 4.466019417475728e-05, 'epoch': 0.12}
+{'loss': 0.3334, 'grad_norm': 2.8325860500335693, 'learning_rate': 4.344660194174757e-05, 'epoch': 0.15}
+{'loss': 0.2984, 'grad_norm': 3.3151261806488037, 'learning_rate': 4.223300970873786e-05, 'epoch': 0.17}
+{'loss': 0.2688, 'grad_norm': 3.17049503326416, 'learning_rate': 4.1019417475728156e-05, 'epoch': 0.19}
+{'eval_loss': 0.26434847712516785, 'eval_wer': 22.414506123747415, 'eval_cer': 9.359628416964897, 'eval_runtime': 284.8372, 'eval_samples_per_second': 1.285, 'eval_steps_per_second': 0.081, 'epoch': 0.19}
+{'loss': 0.258, 'grad_norm': 2.4069628715515137, 'learning_rate': 3.980582524271845e-05, 'epoch': 0.22}
+{'loss': 0.2371, 'grad_norm': 2.641571044921875, 'learning_rate': 3.859223300970874e-05, 'epoch': 0.24}
+{'loss': 0.2261, 'grad_norm': 2.357238292694092, 'learning_rate': 3.737864077669903e-05, 'epoch': 0.27}
+{'loss': 0.2259, 'grad_norm': 2.6992337703704834, 'learning_rate': 3.616504854368932e-05, 'epoch': 0.29}
+{'eval_loss': 0.2050779163837433, 'eval_wer': 17.39462382694449, 'eval_cer': 7.769740348739816, 'eval_runtime': 287.8644, 'eval_samples_per_second': 1.271, 'eval_steps_per_second': 0.08, 'epoch': 0.29}
+{'loss': 0.2051, 'grad_norm': 2.066324472427368, 'learning_rate': 3.4951456310679615e-05, 'epoch': 0.32}
+{'loss': 0.1935, 'grad_norm': 2.05301833152771, 'learning_rate': 3.373786407766991e-05, 'epoch': 0.34}
+{'loss': 0.1927, 'grad_norm': 1.8139615058898926, 'learning_rate': 3.2524271844660195e-05, 'epoch': 0.36}
+{'loss': 0.1795, 'grad_norm': 1.7462364435195923, 'learning_rate': 3.131067961165049e-05, 'epoch': 0.39}
+{'eval_loss': 0.18206442892551422, 'eval_wer': 15.552727851121361, 'eval_cer': 6.875809030686058, 'eval_runtime': 285.599, 'eval_samples_per_second': 1.282, 'eval_steps_per_second': 0.081, 'epoch': 0.39}
+{'loss': 0.1886, 'grad_norm': 2.2222914695739746, 'learning_rate': 3.0097087378640774e-05, 'epoch': 0.41}
+{'loss': 0.1689, 'grad_norm': 1.7037228345870972, 'learning_rate': 2.8883495145631068e-05, 'epoch': 0.44}
+{'loss': 0.1708, 'grad_norm': 1.8108842372894287, 'learning_rate': 2.766990291262136e-05, 'epoch': 0.46}
+{'loss': 0.1519, 'grad_norm': 1.2980667352676392, 'learning_rate': 2.645631067961165e-05, 'epoch': 0.49}
+{'eval_loss': 0.1620415449142456, 'eval_wer': 14.197550501033879, 'eval_cer': 6.59788319500495, 'eval_runtime': 285.5529, 'eval_samples_per_second': 1.282, 'eval_steps_per_second': 0.081, 'epoch': 0.49}
+{'loss': 0.174, 'grad_norm': 1.7965906858444214, 'learning_rate': 2.5242718446601944e-05, 'epoch': 0.51}
+{'loss': 0.1529, 'grad_norm': 1.7485649585723877, 'learning_rate': 2.4029126213592234e-05, 'epoch': 0.53}
+{'loss': 0.1503, 'grad_norm': 1.5757296085357666, 'learning_rate': 2.2815533980582527e-05, 'epoch': 0.56}
+{'loss': 0.1636, 'grad_norm': 1.7505128383636475, 'learning_rate': 2.1601941747572817e-05, 'epoch': 0.58}
+{'eval_loss': 0.1571807563304901, 'eval_wer': 14.315253698107206, 'eval_cer': 7.109571308916469, 'eval_runtime': 285.9586, 'eval_samples_per_second': 1.28, 'eval_steps_per_second': 0.08, 'epoch': 0.58}
+{'loss': 0.1534, 'grad_norm': 1.640405297279358, 'learning_rate': 2.0388349514563107e-05, 'epoch': 0.61}
+{'loss': 0.1514, 'grad_norm': 1.5980861186981201, 'learning_rate': 1.91747572815534e-05, 'epoch': 0.63}
+{'loss': 0.1239, 'grad_norm': 2.5864500999450684, 'learning_rate': 1.796116504854369e-05, 'epoch': 0.66}
+{'loss': 0.1381, 'grad_norm': 1.4424278736114502, 'learning_rate': 1.6747572815533983e-05, 'epoch': 0.68}
+{'eval_loss': 0.13839925825595856, 'eval_wer': 12.384285032606966, 'eval_cer': 5.850909921571613, 'eval_runtime': 288.3899, 'eval_samples_per_second': 1.269, 'eval_steps_per_second': 0.08, 'epoch': 0.68}
+{'loss': 0.1484, 'grad_norm': 1.3900401592254639, 'learning_rate': 1.5533980582524273e-05, 'epoch': 0.7}
+{'loss': 0.1381, 'grad_norm': 1.486188530921936, 'learning_rate': 1.4320388349514562e-05, 'epoch': 0.73}
+{'loss': 0.1229, 'grad_norm': 1.408227801322937, 'learning_rate': 1.3106796116504854e-05, 'epoch': 0.75}
+{'loss': 0.1263, 'grad_norm': 1.6367069482803345, 'learning_rate': 1.1893203883495147e-05, 'epoch': 0.78}
+{'eval_loss': 0.1275552660226822, 'eval_wer': 11.802131382217274, 'eval_cer': 5.7945633137896895, 'eval_runtime': 288.1818, 'eval_samples_per_second': 1.27, 'eval_steps_per_second': 0.08, 'epoch': 0.78}
+{'loss': 0.1262, 'grad_norm': 1.3620997667312622, 'learning_rate': 1.0679611650485437e-05, 'epoch': 0.8}
+{'loss': 0.137, 'grad_norm': 1.6550393104553223, 'learning_rate': 9.466019417475729e-06, 'epoch': 0.83}
+{'loss': 0.1109, 'grad_norm': 1.0304900407791138, 'learning_rate': 8.25242718446602e-06, 'epoch': 0.85}
+{'loss': 0.1252, 'grad_norm': 1.7576088905334473, 'learning_rate': 7.038834951456311e-06, 'epoch': 0.87}
+{'eval_loss': 0.12050735205411911, 'eval_wer': 11.162716717035153, 'eval_cer': 5.304195537957816, 'eval_runtime': 286.8563, 'eval_samples_per_second': 1.276, 'eval_steps_per_second': 0.08, 'epoch': 0.87}
+{'loss': 0.1081, 'grad_norm': 3.4204354286193848, 'learning_rate': 5.825242718446602e-06, 'epoch': 0.9}
+{'loss': 0.1183, 'grad_norm': 1.2360376119613647, 'learning_rate': 4.611650485436894e-06, 'epoch': 0.92}
+{'loss': 0.1071, 'grad_norm': 1.0148295164108276, 'learning_rate': 3.3980582524271844e-06, 'epoch': 0.95}
+{'loss': 0.118, 'grad_norm': 1.7325565814971924, 'learning_rate': 2.184466019417476e-06, 'epoch': 0.97}
+{'eval_loss': 0.11408476531505585, 'eval_wer': 10.54238905678384, 'eval_cer': 5.064341734561792, 'eval_runtime': 283.5106, 'eval_samples_per_second': 1.291, 'eval_steps_per_second': 0.081, 'epoch': 0.97}
+{'loss': 0.1113, 'grad_norm': 1.3790056705474854, 'learning_rate': 9.70873786407767e-07, 'epoch': 1.0}
+{'train_runtime': 3764.2769, 'train_samples_per_second': 0.875, 'train_steps_per_second': 0.055, 'train_loss': 0.4169274895515257, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 1...
+
+🔍 Starting inference and filtering for Fold 1...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 28
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ]
+}
+🧹 Removing checkpoint directory after fold 1...
+📉 Filtering samples with CER > 0.1 | Removed: 28
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ]
+}
+🧹 Removing checkpoint directory after fold 1...
+🧹 Removed IDs so far: ['train_2925', 'train_1315', 'train_1846', 'validate_8', 'train_1134', 'train_700', 'train_527', 'train_1831', 'train_1097', 'train_1211', 'train_2011', 'train_1488', 'train_1105', 'train_1001', 'train_2242', 'train_1777', 'train_1270', 'train_1660', 'train_2340', 'train_2527', 'train_1436', 'train_1980', 'train_1681', 'train_1909', 'train_1532', 'train_408', 'train_2096', 'train_1849']
+
+📁 Fold 2/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+🧹 Removed IDs so far: ['train_1831', 'train_1909', 'train_2242', 'train_527', 'train_700', 'train_1777', 'train_1105', 'train_2011', 'train_2527', 'train_1488', 'train_2925', 'train_1846', 'train_1849', 'train_2096', 'train_1980', 'train_1211', 'train_1270', 'validate_8', 'train_1134', 'train_1660', 'train_1532', 'train_1681', 'train_1315', 'train_408', 'train_2340', 'train_1436', 'train_1097', 'train_1001']
+
+📁 Fold 2/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3266
+📊 Validation samples: 366
+
+🏋️ Training on Fold 2...
+📊 Train samples: 3266
+📊 Validation samples: 366
+
+🏋️ Training on Fold 2...
+{'loss': 0.3549, 'grad_norm': 3.0650076866149902, 'learning_rate': 4.901960784313725e-05, 'epoch': 0.02}
+{'loss': 0.2982, 'grad_norm': 2.318268060684204, 'learning_rate': 4.7794117647058826e-05, 'epoch': 0.05}
+{'loss': 0.1673, 'grad_norm': 1.64564847946167, 'learning_rate': 4.656862745098039e-05, 'epoch': 0.07}
+{'loss': 0.1657, 'grad_norm': 1.7775367498397827, 'learning_rate': 4.5343137254901966e-05, 'epoch': 0.1}
+{'eval_loss': 0.1437143236398697, 'eval_wer': 13.408666537891959, 'eval_cer': 5.990737167116944, 'eval_runtime': 282.4342, 'eval_samples_per_second': 1.296, 'eval_steps_per_second': 0.081, 'epoch': 0.1}
+{'loss': 0.1602, 'grad_norm': 2.169835329055786, 'learning_rate': 4.411764705882353e-05, 'epoch': 0.12}
+{'loss': 0.1524, 'grad_norm': 1.9746588468551636, 'learning_rate': 4.313725490196079e-05, 'epoch': 0.15}
+{'loss': 0.1416, 'grad_norm': 1.4085839986801147, 'learning_rate': 4.1911764705882356e-05, 'epoch': 0.17}
+{'loss': 0.1281, 'grad_norm': 1.4089343547821045, 'learning_rate': 4.068627450980392e-05, 'epoch': 0.2}
+{'eval_loss': 0.1293495148420334, 'eval_wer': 12.46861116476724, 'eval_cer': 5.522964106522578, 'eval_runtime': 283.3517, 'eval_samples_per_second': 1.292, 'eval_steps_per_second': 0.081, 'epoch': 0.2}
+{'loss': 0.1395, 'grad_norm': 1.4428585767745972, 'learning_rate': 3.946078431372549e-05, 'epoch': 0.22}
+{'loss': 0.1417, 'grad_norm': 17.14790916442871, 'learning_rate': 3.8235294117647055e-05, 'epoch': 0.24}
+{'loss': 0.1449, 'grad_norm': 2.790740489959717, 'learning_rate': 3.700980392156863e-05, 'epoch': 0.27}
+{'loss': 0.1466, 'grad_norm': 1.6758925914764404, 'learning_rate': 3.5784313725490195e-05, 'epoch': 0.29}
+{'eval_loss': 0.12200577557086945, 'eval_wer': 13.766016354387997, 'eval_cer': 7.478965650328058, 'eval_runtime': 282.6773, 'eval_samples_per_second': 1.295, 'eval_steps_per_second': 0.081, 'epoch': 0.29}
+{'loss': 0.1502, 'grad_norm': 1.6686270236968994, 'learning_rate': 3.455882352941177e-05, 'epoch': 0.32}
+{'loss': 0.1246, 'grad_norm': 1.330079436302185, 'learning_rate': 3.3333333333333335e-05, 'epoch': 0.34}
+{'loss': 0.1337, 'grad_norm': 1.6082299947738647, 'learning_rate': 3.210784313725491e-05, 'epoch': 0.37}
+{'loss': 0.1305, 'grad_norm': 1.520956039428711, 'learning_rate': 3.0882352941176475e-05, 'epoch': 0.39}
+{'eval_loss': 0.11460741609334946, 'eval_wer': 11.737814693194256, 'eval_cer': 5.487456580470861, 'eval_runtime': 283.6864, 'eval_samples_per_second': 1.29, 'eval_steps_per_second': 0.081, 'epoch': 0.39}
+{'loss': 0.1228, 'grad_norm': 1.3503490686416626, 'learning_rate': 2.965686274509804e-05, 'epoch': 0.42}
+{'loss': 0.1237, 'grad_norm': 1.3669673204421997, 'learning_rate': 2.8431372549019608e-05, 'epoch': 0.44}
+{'loss': 0.1134, 'grad_norm': 1.3685903549194336, 'learning_rate': 2.7205882352941174e-05, 'epoch': 0.47}
+{'loss': 0.117, 'grad_norm': 1.1949602365493774, 'learning_rate': 2.5980392156862747e-05, 'epoch': 0.49}
+{'eval_loss': 0.10650945454835892, 'eval_wer': 11.612259352263216, 'eval_cer': 5.499035121574682, 'eval_runtime': 283.6291, 'eval_samples_per_second': 1.29, 'eval_steps_per_second': 0.081, 'epoch': 0.49}
+{'loss': 0.123, 'grad_norm': 1.330897331237793, 'learning_rate': 2.4754901960784317e-05, 'epoch': 0.51}
+{'loss': 0.1137, 'grad_norm': 1.3111499547958374, 'learning_rate': 2.3529411764705884e-05, 'epoch': 0.54}
+{'loss': 0.123, 'grad_norm': 1.686315655708313, 'learning_rate': 2.2303921568627454e-05, 'epoch': 0.56}
+{'loss': 0.1116, 'grad_norm': 1.1401104927062988, 'learning_rate': 2.107843137254902e-05, 'epoch': 0.59}
+{'eval_loss': 0.10277416557073593, 'eval_wer': 10.788101216920996, 'eval_cer': 5.090698571979931, 'eval_runtime': 286.7577, 'eval_samples_per_second': 1.276, 'eval_steps_per_second': 0.08, 'epoch': 0.59}
+{'loss': 0.0945, 'grad_norm': 1.0558966398239136, 'learning_rate': 1.9852941176470586e-05, 'epoch': 0.61}
+{'loss': 0.1009, 'grad_norm': 2.0206799507141113, 'learning_rate': 1.862745098039216e-05, 'epoch': 0.64}
+{'loss': 0.1091, 'grad_norm': 1.249777913093567, 'learning_rate': 1.7401960784313726e-05, 'epoch': 0.66}
+{'loss': 0.1012, 'grad_norm': 1.2181816101074219, 'learning_rate': 1.6176470588235296e-05, 'epoch': 0.69}
+{'eval_loss': 0.09774605929851532, 'eval_wer': 10.488700019316207, 'eval_cer': 4.988807410266307, 'eval_runtime': 288.8547, 'eval_samples_per_second': 1.267, 'eval_steps_per_second': 0.08, 'epoch': 0.69}
+{'loss': 0.1087, 'grad_norm': 1.2992780208587646, 'learning_rate': 1.4950980392156863e-05, 'epoch': 0.71}
+{'loss': 0.0995, 'grad_norm': 1.1615941524505615, 'learning_rate': 1.3725490196078432e-05, 'epoch': 0.73}
+{'loss': 0.1047, 'grad_norm': 1.1356347799301147, 'learning_rate': 1.25e-05, 'epoch': 0.76}
+{'loss': 0.1045, 'grad_norm': 0.8952062726020813, 'learning_rate': 1.1274509803921569e-05, 'epoch': 0.78}
+{'eval_loss': 0.0915166512131691, 'eval_wer': 9.812632798918292, 'eval_cer': 4.796603627942879, 'eval_runtime': 289.2538, 'eval_samples_per_second': 1.265, 'eval_steps_per_second': 0.08, 'epoch': 0.78}
+{'loss': 0.0932, 'grad_norm': 0.990554690361023, 'learning_rate': 1.0049019607843139e-05, 'epoch': 0.81}
+{'loss': 0.1007, 'grad_norm': 1.0515787601470947, 'learning_rate': 8.823529411764707e-06, 'epoch': 0.83}
+{'loss': 0.105, 'grad_norm': 1.0741246938705444, 'learning_rate': 7.598039215686274e-06, 'epoch': 0.86}
+{'loss': 0.0967, 'grad_norm': 1.0713090896606445, 'learning_rate': 6.372549019607843e-06, 'epoch': 0.88}
+{'eval_loss': 0.08732827752828598, 'eval_wer': 9.38445689266628, 'eval_cer': 4.494789656503281, 'eval_runtime': 290.3895, 'eval_samples_per_second': 1.26, 'eval_steps_per_second': 0.079, 'epoch': 0.88}
+{'loss': 0.0914, 'grad_norm': 1.1218552589416504, 'learning_rate': 5.147058823529412e-06, 'epoch': 0.91}
+{'loss': 0.0985, 'grad_norm': 0.9141920208930969, 'learning_rate': 3.92156862745098e-06, 'epoch': 0.93}
+{'loss': 0.0921, 'grad_norm': 0.8264460563659668, 'learning_rate': 2.6960784313725493e-06, 'epoch': 0.95}
+{'loss': 0.0918, 'grad_norm': 0.8409633636474609, 'learning_rate': 1.4705882352941177e-06, 'epoch': 0.98}
+{'eval_loss': 0.08384114503860474, 'eval_wer': 9.294314596613225, 'eval_cer': 4.550366653801621, 'eval_runtime': 293.485, 'eval_samples_per_second': 1.247, 'eval_steps_per_second': 0.078, 'epoch': 0.98}
+{'train_runtime': 3689.5854, 'train_samples_per_second': 0.885, 'train_steps_per_second': 0.055, 'train_loss': 0.1298365360673736, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 2...
+
+🔍 Starting inference and filtering for Fold 2...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 22
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ]
+}
+🧹 Removing checkpoint directory after fold 2...
+🧹 Removed IDs so far: ['train_1831', 'train_1909', 'train_721', 'train_1615', 'train_1330', 'validate_385', 'train_1042', 'train_1777', 'train_1105', 'train_2011', 'train_2527', 'train_175', 'train_1281', 'train_2805', 'train_1697', 'validate_15', 'validate_688', 'validate_477', 'train_1211', 'train_2183', 'train_1681', 'train_2655', 'train_1315', 'train_1295', 'train_408', 'train_2340', 'train_1436', 'train_1425', 'train_1097', 'train_1001', 'train_650', 'train_1157', 'train_2242', 'train_527', 'train_700', 'train_1488', 'train_2925', 'train_1846', 'train_1849', 'train_2096', 'train_1980', 'train_1270', 'train_1738', 'train_1134', 'train_1660', 'train_2522', 'train_1532', 'validate_656', 'validate_8', 'train_246']
+
+📁 Fold 3/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+📉 Filtering samples with CER > 0.1 | Removed: 22
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ]
+}
+🧹 Removed IDs so far: ['validate_477', 'train_2925', 'train_1315', 'train_1846', 'train_175', 'train_2805', 'train_721', 'train_1425', 'train_527', 'validate_656', 'train_1697', 'train_1211', 'validate_688', 'train_1001', 'train_2242', 'train_1157', 'train_1330', 'train_1615', 'train_1532', 'train_1281', 'validate_8', 'validate_15', 'train_1134', 'train_700', 'train_1831', 'train_1295', 'train_1097', 'train_650', 'train_2011', 'train_2655', 'train_1042', 'train_1488', 'train_1105', 'validate_385', 'train_1738', 'train_2522', 'train_1270', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'train_1980', 'train_408', 'train_1681', 'train_1909', 'train_1777', 'train_2096', 'train_246', 'train_1849']
+
+📁 Fold 3/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3244
+📊 Validation samples: 366
+
+🏋️ Training on Fold 3...
+📊 Train samples: 3244
+📊 Validation samples: 366
+
+🏋️ Training on Fold 3...
+{'loss': 0.2029, 'grad_norm': 3.0174646377563477, 'learning_rate': 4.8762376237623764e-05, 'epoch': 0.02}
+{'loss': 0.1206, 'grad_norm': 1.3574808835983276, 'learning_rate': 4.7524752475247525e-05, 'epoch': 0.05}
+{'loss': 0.1156, 'grad_norm': 1.7973593473434448, 'learning_rate': 4.653465346534654e-05, 'epoch': 0.07}
+{'loss': 0.1318, 'grad_norm': 1.456968069076538, 'learning_rate': 4.52970297029703e-05, 'epoch': 0.1}
+{'eval_loss': 0.1053122952580452, 'eval_wer': 11.56668793873644, 'eval_cer': 5.77853555135708, 'eval_runtime': 290.7224, 'eval_samples_per_second': 1.259, 'eval_steps_per_second': 0.079, 'epoch': 0.1}
+{'loss': 0.1121, 'grad_norm': 1.4449520111083984, 'learning_rate': 4.405940594059406e-05, 'epoch': 0.12}
+{'loss': 0.1227, 'grad_norm': 1.027023196220398, 'learning_rate': 4.282178217821782e-05, 'epoch': 0.15}
+{'loss': 0.1139, 'grad_norm': 1.555273175239563, 'learning_rate': 4.158415841584158e-05, 'epoch': 0.17}
+{'loss': 0.1083, 'grad_norm': 1.2506787776947021, 'learning_rate': 4.034653465346535e-05, 'epoch': 0.2}
+{'eval_loss': 0.10647156834602356, 'eval_wer': 11.461391193363115, 'eval_cer': 5.608036496014009, 'eval_runtime': 290.1149, 'eval_samples_per_second': 1.262, 'eval_steps_per_second': 0.079, 'epoch': 0.2}
+{'loss': 0.1239, 'grad_norm': 1.6803277730941772, 'learning_rate': 3.910891089108911e-05, 'epoch': 0.22}
+{'loss': 0.1128, 'grad_norm': 1.2738780975341797, 'learning_rate': 3.787128712871287e-05, 'epoch': 0.25}
+{'loss': 0.1131, 'grad_norm': 1.5037020444869995, 'learning_rate': 3.6633663366336634e-05, 'epoch': 0.27}
+{'loss': 0.1121, 'grad_norm': 1.9812493324279785, 'learning_rate': 3.5396039603960395e-05, 'epoch': 0.3}
+{'eval_loss': 0.10070566833019257, 'eval_wer': 10.5743458838545, 'eval_cer': 5.072730903337788, 'eval_runtime': 291.3031, 'eval_samples_per_second': 1.256, 'eval_steps_per_second': 0.079, 'epoch': 0.3}
+{'loss': 0.101, 'grad_norm': nan, 'learning_rate': 3.440594059405941e-05, 'epoch': 0.32}
+{'loss': 0.109, 'grad_norm': 1.4953089952468872, 'learning_rate': 3.3168316831683175e-05, 'epoch': 0.35}
+{'loss': 0.1085, 'grad_norm': 1.447083592414856, 'learning_rate': 3.1930693069306936e-05, 'epoch': 0.37}
+{'loss': 0.107, 'grad_norm': 1.0741996765136719, 'learning_rate': 3.06930693069307e-05, 'epoch': 0.39}
+{'eval_loss': 0.08977248519659042, 'eval_wer': 9.645820038289726, 'eval_cer': 4.833878623104926, 'eval_runtime': 292.6362, 'eval_samples_per_second': 1.251, 'eval_steps_per_second': 0.079, 'epoch': 0.39}
+{'loss': 0.1029, 'grad_norm': 0.9421787261962891, 'learning_rate': 2.9455445544554455e-05, 'epoch': 0.42}
+{'loss': 0.1033, 'grad_norm': 1.282331943511963, 'learning_rate': 2.8217821782178216e-05, 'epoch': 0.44}
+{'loss': 0.1031, 'grad_norm': 1.055516242980957, 'learning_rate': 2.6980198019801985e-05, 'epoch': 0.47}
+{'loss': 0.0993, 'grad_norm': 1.226196050643921, 'learning_rate': 2.5742574257425746e-05, 'epoch': 0.49}
+{'eval_loss': 0.0917472094297409, 'eval_wer': 9.802169751116784, 'eval_cer': 5.040474325299909, 'eval_runtime': 290.4252, 'eval_samples_per_second': 1.26, 'eval_steps_per_second': 0.079, 'epoch': 0.49}
+{'loss': 0.0919, 'grad_norm': 1.04999840259552, 'learning_rate': 2.4504950495049507e-05, 'epoch': 0.52}
+{'loss': 0.1087, 'grad_norm': 1.1726641654968262, 'learning_rate': 2.326732673267327e-05, 'epoch': 0.54}
+{'loss': 0.0956, 'grad_norm': 1.1267043352127075, 'learning_rate': 2.202970297029703e-05, 'epoch': 0.57}
+{'loss': 0.089, 'grad_norm': 0.9967796802520752, 'learning_rate': 2.079207920792079e-05, 'epoch': 0.59}
+{'eval_loss': 0.08248300850391388, 'eval_wer': 9.262922782386726, 'eval_cer': 4.671827719152727, 'eval_runtime': 290.2679, 'eval_samples_per_second': 1.261, 'eval_steps_per_second': 0.079, 'epoch': 0.59}
+{'loss': 0.0908, 'grad_norm': 1.1672391891479492, 'learning_rate': 1.9554455445544556e-05, 'epoch': 0.62}
+{'loss': 0.0909, 'grad_norm': 0.8695245385169983, 'learning_rate': 1.8316831683168317e-05, 'epoch': 0.64}
+{'loss': 0.0904, 'grad_norm': 0.9869154095649719, 'learning_rate': 1.707920792079208e-05, 'epoch': 0.67}
+{'loss': 0.0905, 'grad_norm': 0.943355917930603, 'learning_rate': 1.5841584158415843e-05, 'epoch': 0.69}
+{'eval_loss': 0.08034396916627884, 'eval_wer': 8.819400127632418, 'eval_cer': 4.445263659124771, 'eval_runtime': 290.9206, 'eval_samples_per_second': 1.258, 'eval_steps_per_second': 0.079, 'epoch': 0.69}
+{'loss': 0.0882, 'grad_norm': 0.8935526013374329, 'learning_rate': 1.4603960396039604e-05, 'epoch': 0.72}
+{'loss': 0.0946, 'grad_norm': 0.959635853767395, 'learning_rate': 1.3366336633663367e-05, 'epoch': 0.74}
+{'loss': 0.0945, 'grad_norm': 1.0496845245361328, 'learning_rate': 1.2128712871287128e-05, 'epoch': 0.76}
+{'loss': 0.088, 'grad_norm': 0.8259853720664978, 'learning_rate': 1.0891089108910891e-05, 'epoch': 0.79}
+{'eval_loss': 0.07586809247732162, 'eval_wer': 8.525845564773453, 'eval_cer': 4.203339323840683, 'eval_runtime': 290.8432, 'eval_samples_per_second': 1.258, 'eval_steps_per_second': 0.079, 'epoch': 0.79}
+{'loss': 0.0871, 'grad_norm': 0.847038745880127, 'learning_rate': 9.653465346534654e-06, 'epoch': 0.81}
+{'loss': 0.084, 'grad_norm': 0.849596381187439, 'learning_rate': 8.415841584158417e-06, 'epoch': 0.84}
+{'loss': 0.0795, 'grad_norm': 0.9434416890144348, 'learning_rate': 7.178217821782178e-06, 'epoch': 0.86}
+{'loss': 0.0851, 'grad_norm': 0.8714313507080078, 'learning_rate': 5.940594059405941e-06, 'epoch': 0.89}
+{'eval_loss': 0.0714258924126625, 'eval_wer': 8.20676451818762, 'eval_cer': 4.118857809931955, 'eval_runtime': 289.2322, 'eval_samples_per_second': 1.265, 'eval_steps_per_second': 0.08, 'epoch': 0.89}
+{'loss': 0.0809, 'grad_norm': 0.8350054621696472, 'learning_rate': 4.702970297029704e-06, 'epoch': 0.91}
+{'loss': 0.0797, 'grad_norm': 0.8889136910438538, 'learning_rate': 3.4653465346534657e-06, 'epoch': 0.94}
+{'loss': 0.082, 'grad_norm': 0.7736765146255493, 'learning_rate': 2.227722772277228e-06, 'epoch': 0.96}
+{'loss': 0.0806, 'grad_norm': 1.0649076700210571, 'learning_rate': 9.900990099009902e-07, 'epoch': 0.99}
+{'eval_loss': 0.07075130194425583, 'eval_wer': 8.184428844926611, 'eval_cer': 4.126537947560021, 'eval_runtime': 291.6848, 'eval_samples_per_second': 1.255, 'eval_steps_per_second': 0.079, 'epoch': 0.99}
+{'train_runtime': 3721.1871, 'train_samples_per_second': 0.872, 'train_steps_per_second': 0.054, 'train_loss': 0.10211140655054904, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 3...
+
+🔍 Starting inference and filtering for Fold 3...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 20
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ]
+}
+🧹 Removing checkpoint directory after fold 3...
+🧹 Removed IDs so far: ['train_1831', 'train_2115', 'train_1909', 'train_721', 'train_654', 'train_1615', 'train_1330', 'validate_385', 'train_1042', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1105', 'train_2011', 'train_2527', 'train_175', 'train_1281', 'train_2805', 'train_1697', 'validate_15', 'validate_688', 'train_1361', 'validate_477', 'train_1964', 'train_1211', 'train_2183', 'train_2279', 'train_1681', 'train_220', 'train_2655', 'train_942', 'train_535', 'train_1315', 'train_1295', 'train_408', 'train_2340', 'train_1436', 'train_1425', 'train_1097', 'train_1001', 'validate_424', 'train_650', 'train_1157', 'train_111', 'train_2242', 'train_527', 'train_700', 'train_2526', 'train_2321', 'train_1488', 'train_2925', 'train_1846', 'train_1849', 'train_2096', 'train_1980', 'train_1270', 'train_1738', 'train_1351', 'train_1134', 'train_1818', 'train_1660', 'train_2522', 'train_1532', 'train_2178', 'train_1366', 'validate_656', 'validate_222', 'validate_8', 'train_246']
+
+📁 Fold 4/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+📉 Filtering samples with CER > 0.1 | Removed: 20
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ]
+}
+🧹 Removed IDs so far: ['validate_477', 'train_2925', 'train_1315', 'train_1846', 'train_175', 'train_2526', 'train_2805', 'train_721', 'train_1425', 'train_942', 'train_527', 'validate_656', 'train_1697', 'train_111', 'train_1366', 'train_1211', 'validate_688', 'train_1351', 'train_1001', 'train_2242', 'train_1361', 'train_1157', 'train_1330', 'validate_530', 'train_1615', 'train_1818', 'train_1532', 'train_1483', 'train_2279', 'train_1281', 'validate_8', 'validate_15', 'train_1650', 'train_1134', 'train_700', 'train_2178', 'train_1831', 'train_1295', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'validate_385', 'train_1738', 'train_2522', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_408', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_535', 'train_1777', 'train_2096', 'train_246', 'train_1849']
+
+📁 Fold 4/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3224
+📊 Validation samples: 366
+
+🏋️ Training on Fold 4...
+📊 Train samples: 3224
+📊 Validation samples: 366
+
+🏋️ Training on Fold 4...
+{'loss': 2.4509, 'grad_norm': 253.8993682861328, 'learning_rate': 4.9253731343283586e-05, 'epoch': 0.02}
+{'loss': 0.1381, 'grad_norm': 1.565853238105774, 'learning_rate': 4.800995024875622e-05, 'epoch': 0.05}
+{'loss': 0.1098, 'grad_norm': 1.8350352048873901, 'learning_rate': 4.676616915422886e-05, 'epoch': 0.07}
+{'loss': 0.1146, 'grad_norm': 1.6727354526519775, 'learning_rate': 4.5522388059701495e-05, 'epoch': 0.1}
+{'eval_loss': 0.0932745411992073, 'eval_wer': 10.459902638995644, 'eval_cer': 5.253170415625289, 'eval_runtime': 288.4299, 'eval_samples_per_second': 1.269, 'eval_steps_per_second': 0.08, 'epoch': 0.1}
+{'loss': 0.108, 'grad_norm': 1.763722538948059, 'learning_rate': 4.427860696517413e-05, 'epoch': 0.12}
+{'loss': 0.1074, 'grad_norm': 1.175126314163208, 'learning_rate': 4.303482587064677e-05, 'epoch': 0.15}
+{'loss': 0.1002, 'grad_norm': 1.3748348951339722, 'learning_rate': 4.1791044776119404e-05, 'epoch': 0.17}
+{'loss': 0.0929, 'grad_norm': 1.103973388671875, 'learning_rate': 4.054726368159204e-05, 'epoch': 0.2}
+{'eval_loss': 0.0859357938170433, 'eval_wer': 9.755316423264155, 'eval_cer': 4.717053904779537, 'eval_runtime': 290.2008, 'eval_samples_per_second': 1.261, 'eval_steps_per_second': 0.079, 'epoch': 0.2}
+{'loss': 0.0967, 'grad_norm': 1.1833304166793823, 'learning_rate': 3.9303482587064676e-05, 'epoch': 0.22}
+{'loss': 0.0881, 'grad_norm': 1.2518415451049805, 'learning_rate': 3.805970149253731e-05, 'epoch': 0.25}
+{'loss': 0.0908, 'grad_norm': 1.1959367990493774, 'learning_rate': 3.681592039800995e-05, 'epoch': 0.27}
+{'loss': 0.1045, 'grad_norm': 1.3585116863250732, 'learning_rate': 3.5572139303482585e-05, 'epoch': 0.3}
+{'eval_loss': 0.08751807361841202, 'eval_wer': 10.238918780425314, 'eval_cer': 5.283254651485699, 'eval_runtime': 291.1073, 'eval_samples_per_second': 1.257, 'eval_steps_per_second': 0.079, 'epoch': 0.3}
+{'loss': 0.0995, 'grad_norm': 1.093610405921936, 'learning_rate': 3.432835820895522e-05, 'epoch': 0.32}
+{'loss': 0.0912, 'grad_norm': 1.2770441770553589, 'learning_rate': 3.3084577114427865e-05, 'epoch': 0.35}
+{'loss': 0.0868, 'grad_norm': 1.8763879537582397, 'learning_rate': 3.18407960199005e-05, 'epoch': 0.37}
+{'loss': 0.0874, 'grad_norm': 1.518498182296753, 'learning_rate': 3.059701492537314e-05, 'epoch': 0.4}
+{'eval_loss': 0.08119819313287735, 'eval_wer': 9.335767358442224, 'eval_cer': 4.354500293128452, 'eval_runtime': 290.4277, 'eval_samples_per_second': 1.26, 'eval_steps_per_second': 0.079, 'epoch': 0.4}
+{'loss': 0.0881, 'grad_norm': 1.2107826471328735, 'learning_rate': 2.935323383084577e-05, 'epoch': 0.42}
+{'loss': 0.0967, 'grad_norm': 1.0796867609024048, 'learning_rate': 2.810945273631841e-05, 'epoch': 0.45}
+{'loss': 0.0854, 'grad_norm': 1.1833770275115967, 'learning_rate': 2.6865671641791047e-05, 'epoch': 0.47}
+{'loss': 0.0947, 'grad_norm': 1.3598765134811401, 'learning_rate': 2.5621890547263683e-05, 'epoch': 0.5}
+{'eval_loss': 0.07804061472415924, 'eval_wer': 9.428644632334102, 'eval_cer': 4.543491005584868, 'eval_runtime': 290.3166, 'eval_samples_per_second': 1.261, 'eval_steps_per_second': 0.079, 'epoch': 0.5}
+{'loss': 0.079, 'grad_norm': 0.9139575958251953, 'learning_rate': 2.437810945273632e-05, 'epoch': 0.52}
+{'loss': 0.0844, 'grad_norm': 1.0226647853851318, 'learning_rate': 2.3134328358208956e-05, 'epoch': 0.55}
+{'loss': 0.0774, 'grad_norm': 0.8645874857902527, 'learning_rate': 2.1890547263681592e-05, 'epoch': 0.57}
+{'loss': 0.0869, 'grad_norm': 0.8427056670188904, 'learning_rate': 2.0646766169154232e-05, 'epoch': 0.6}
+{'eval_loss': 0.07263167202472687, 'eval_wer': 8.762490392006148, 'eval_cer': 4.361442809096239, 'eval_runtime': 291.8159, 'eval_samples_per_second': 1.254, 'eval_steps_per_second': 0.079, 'epoch': 0.6}
+{'loss': 0.0811, 'grad_norm': 0.8812246918678284, 'learning_rate': 1.9402985074626868e-05, 'epoch': 0.62}
+{'loss': 0.077, 'grad_norm': 0.7895978689193726, 'learning_rate': 1.8159203980099505e-05, 'epoch': 0.65}
+{'loss': 0.0805, 'grad_norm': 0.9212324023246765, 'learning_rate': 1.691542288557214e-05, 'epoch': 0.67}
+{'loss': 0.0819, 'grad_norm': 0.9385091066360474, 'learning_rate': 1.5671641791044777e-05, 'epoch': 0.69}
+{'eval_loss': 0.0696972906589508, 'eval_wer': 8.44862925954394, 'eval_cer': 4.187879909901571, 'eval_runtime': 293.1691, 'eval_samples_per_second': 1.248, 'eval_steps_per_second': 0.078, 'epoch': 0.69}
+{'loss': 0.0705, 'grad_norm': 0.7750218510627747, 'learning_rate': 1.4427860696517415e-05, 'epoch': 0.72}
+{'loss': 0.0741, 'grad_norm': 0.750302255153656, 'learning_rate': 1.3184079601990052e-05, 'epoch': 0.74}
+{'loss': 0.0721, 'grad_norm': 0.7414559125900269, 'learning_rate': 1.1940298507462686e-05, 'epoch': 0.77}
+{'loss': 0.0821, 'grad_norm': 0.959660530090332, 'learning_rate': 1.0696517412935324e-05, 'epoch': 0.79}
+{'eval_loss': 0.06735939532518387, 'eval_wer': 8.221240071739686, 'eval_cer': 4.037458730599525, 'eval_runtime': 290.6961, 'eval_samples_per_second': 1.259, 'eval_steps_per_second': 0.079, 'epoch': 0.79}
+{'loss': 0.0731, 'grad_norm': 0.8077113032341003, 'learning_rate': 9.45273631840796e-06, 'epoch': 0.82}
+{'loss': 0.0788, 'grad_norm': 0.9271259903907776, 'learning_rate': 8.208955223880597e-06, 'epoch': 0.84}
+{'loss': 0.0791, 'grad_norm': 0.7891820669174194, 'learning_rate': 6.965174129353234e-06, 'epoch': 0.87}
+{'loss': 0.0764, 'grad_norm': 1.0904375314712524, 'learning_rate': 5.7213930348258714e-06, 'epoch': 0.89}
+{'eval_loss': 0.06455709785223007, 'eval_wer': 7.891365616192672, 'eval_cer': 3.9256070844518502, 'eval_runtime': 290.2731, 'eval_samples_per_second': 1.261, 'eval_steps_per_second': 0.079, 'epoch': 0.89}
+{'loss': 0.0713, 'grad_norm': 0.698601245880127, 'learning_rate': 4.477611940298508e-06, 'epoch': 0.92}
+{'loss': 0.0655, 'grad_norm': 0.6900417804718018, 'learning_rate': 3.233830845771144e-06, 'epoch': 0.94}
+{'loss': 0.0672, 'grad_norm': 0.8063328266143799, 'learning_rate': 1.9900497512437813e-06, 'epoch': 0.97}
+{'loss': 0.0706, 'grad_norm': 0.7660747170448303, 'learning_rate': 7.462686567164179e-07, 'epoch': 0.99}
+{'eval_loss': 0.06313548237085342, 'eval_wer': 8.10594414552908, 'eval_cer': 3.9564627109753463, 'eval_runtime': 291.4541, 'eval_samples_per_second': 1.256, 'eval_steps_per_second': 0.079, 'epoch': 0.99}
+{'train_runtime': 3745.8798, 'train_samples_per_second': 0.861, 'train_steps_per_second': 0.054, 'train_loss': 0.14622271891257063, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 4...
+
+🔍 Starting inference and filtering for Fold 4...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 14
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ]
+}
+🧹 Removing checkpoint directory after fold 4...
+🧹 Removed IDs so far: ['train_175', 'train_2526', 'train_2805', 'train_721', 'train_942', 'validate_656', 'train_111', 'train_2588', 'validate_688', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_1330', 'validate_530', 'train_1615', 'train_1532', 'train_2562', 'train_1483', 'train_2279', 'validate_249', 'train_1281', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'validate_385', 'validate_606', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_1777', 'train_1425', 'train_2178', 'train_246', 'validate_477', 'train_2925', 'train_1315', 'train_1846', 'train_527', 'train_1697', 'train_1366', 'train_1211', 'train_1351', 'train_2242', 'train_1957', 'train_1818', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'train_1295', 'train_424', 'train_1738', 'train_2522', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_2886', 'train_535', 'train_408', 'train_2096', 'train_1849']
+
+📁 Fold 5/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+📉 Filtering samples with CER > 0.1 | Removed: 14
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ]
+}
+🧹 Removed IDs so far: ['train_1909', 'train_721', 'train_1615', 'train_424', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'train_979', 'validate_249', 'train_1681', 'train_942', 'train_2655', 'train_535', 'validate_606', 'train_1315', 'train_2340', 'train_1436', 'train_1425', 'validate_424', 'train_650', 'train_1157', 'train_2242', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_2096', 'train_1980', 'train_1270', 'train_1487', 'train_1134', 'train_1818', 'train_2178', 'validate_656', 'train_246', 'train_2289', 'train_1831', 'train_2115', 'train_654', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_111', 'train_700', 'train_2321', 'train_1488', 'train_1738', 'train_1351', 'train_1866', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1366', 'validate_222', 'validate_8', 'train_328']
+
+📁 Fold 5/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3210
+📊 Validation samples: 366
+
+🏋️ Training on Fold 5...
+📊 Train samples: 3210
+📊 Validation samples: 366
+
+🏋️ Training on Fold 5...
+{'loss': 0.1188, 'grad_norm': 1.3206188678741455, 'learning_rate': 4.875e-05, 'epoch': 0.02}
+{'loss': 0.098, 'grad_norm': 0.8730067610740662, 'learning_rate': 4.775e-05, 'epoch': 0.05}
+{'loss': 0.0861, 'grad_norm': 0.8702803254127502, 'learning_rate': 4.6500000000000005e-05, 'epoch': 0.07}
+{'loss': 0.0994, 'grad_norm': 1.0106033086776733, 'learning_rate': 4.525e-05, 'epoch': 0.1}
+{'eval_loss': 0.08694766461849213, 'eval_wer': 10.295891802654136, 'eval_cer': 4.893971558355589, 'eval_runtime': 283.8033, 'eval_samples_per_second': 1.29, 'eval_steps_per_second': 0.081, 'epoch': 0.1}
+{'loss': 0.1005, 'grad_norm': 0.9427776336669922, 'learning_rate': 4.4000000000000006e-05, 'epoch': 0.12}
+{'loss': 0.0885, 'grad_norm': 1.4170608520507812, 'learning_rate': 4.275e-05, 'epoch': 0.15}
+{'loss': 0.0802, 'grad_norm': 0.9525872468948364, 'learning_rate': 4.15e-05, 'epoch': 0.17}
+{'loss': 0.0876, 'grad_norm': 2.1700186729431152, 'learning_rate': 4.025e-05, 'epoch': 0.2}
+{'eval_loss': 0.08498299866914749, 'eval_wer': 10.118102736681694, 'eval_cer': 4.7471219764584145, 'eval_runtime': 285.663, 'eval_samples_per_second': 1.281, 'eval_steps_per_second': 0.081, 'epoch': 0.2}
+{'loss': 0.086, 'grad_norm': nan, 'learning_rate': 3.9250000000000005e-05, 'epoch': 0.22}
+{'loss': 0.0841, 'grad_norm': 1.0046563148498535, 'learning_rate': 3.8e-05, 'epoch': 0.25}
+{'loss': 0.0902, 'grad_norm': 1.1931087970733643, 'learning_rate': 3.675e-05, 'epoch': 0.27}
+{'loss': 0.0853, 'grad_norm': 1.0371894836425781, 'learning_rate': 3.55e-05, 'epoch': 0.3}
+{'eval_loss': 0.07607268542051315, 'eval_wer': 9.194234554574894, 'eval_cer': 4.411574486216683, 'eval_runtime': 294.6712, 'eval_samples_per_second': 1.242, 'eval_steps_per_second': 0.078, 'epoch': 0.3}
+{'loss': 0.0767, 'grad_norm': 1.2580170631408691, 'learning_rate': 3.4250000000000006e-05, 'epoch': 0.32}
+{'loss': 0.0837, 'grad_norm': 1.5563545227050781, 'learning_rate': 3.3e-05, 'epoch': 0.35}
+{'loss': 0.075, 'grad_norm': 0.8157151341438293, 'learning_rate': 3.175e-05, 'epoch': 0.37}
+{'loss': 0.0895, 'grad_norm': 1.9744206666946411, 'learning_rate': 3.05e-05, 'epoch': 0.4}
+{'eval_loss': 0.0715450644493103, 'eval_wer': 9.073591974093594, 'eval_cer': 4.365921766455903, 'eval_runtime': 287.386, 'eval_samples_per_second': 1.274, 'eval_steps_per_second': 0.08, 'epoch': 0.4}
+{'loss': 0.0821, 'grad_norm': 1.0189554691314697, 'learning_rate': 2.925e-05, 'epoch': 0.42}
+{'loss': 0.0799, 'grad_norm': 0.8894618153572083, 'learning_rate': 2.8000000000000003e-05, 'epoch': 0.45}
+{'loss': 0.0993, 'grad_norm': 1.351605772972107, 'learning_rate': 2.6750000000000003e-05, 'epoch': 0.47}
+{'loss': 0.071, 'grad_norm': 0.8955974578857422, 'learning_rate': 2.5500000000000003e-05, 'epoch': 0.5}
+{'eval_loss': 0.07149864733219147, 'eval_wer': 8.502127119182171, 'eval_cer': 3.9885259497667906, 'eval_runtime': 287.5907, 'eval_samples_per_second': 1.273, 'eval_steps_per_second': 0.08, 'epoch': 0.5}
+{'loss': 0.0758, 'grad_norm': 0.8241479992866516, 'learning_rate': 2.425e-05, 'epoch': 0.52}
+{'loss': 0.0851, 'grad_norm': 0.6997002363204956, 'learning_rate': 2.3000000000000003e-05, 'epoch': 0.55}
+{'loss': 0.0707, 'grad_norm': 0.655413031578064, 'learning_rate': 2.175e-05, 'epoch': 0.57}
+{'loss': 0.0706, 'grad_norm': 0.7279344797134399, 'learning_rate': 2.05e-05, 'epoch': 0.6}
+{'eval_loss': 0.06530839204788208, 'eval_wer': 8.105276525493682, 'eval_cer': 3.850046033159092, 'eval_runtime': 290.6353, 'eval_samples_per_second': 1.259, 'eval_steps_per_second': 0.079, 'epoch': 0.6}
+{'loss': 0.0772, 'grad_norm': 0.7339247465133667, 'learning_rate': 1.925e-05, 'epoch': 0.62}
+{'loss': 0.0739, 'grad_norm': 0.9084128141403198, 'learning_rate': 1.8e-05, 'epoch': 0.65}
+{'loss': 0.0692, 'grad_norm': 0.865627646446228, 'learning_rate': 1.675e-05, 'epoch': 0.67}
+{'loss': 0.0626, 'grad_norm': 0.6983423233032227, 'learning_rate': 1.55e-05, 'epoch': 0.7}
+{'eval_loss': 0.0638902485370636, 'eval_wer': 8.067178868499587, 'eval_cer': 3.847763397171053, 'eval_runtime': 289.3316, 'eval_samples_per_second': 1.265, 'eval_steps_per_second': 0.079, 'epoch': 0.7}
+{'loss': 0.072, 'grad_norm': 1.054239273071289, 'learning_rate': 1.4249999999999999e-05, 'epoch': 0.72}
+{'loss': 0.0644, 'grad_norm': 0.7150585055351257, 'learning_rate': 1.3000000000000001e-05, 'epoch': 0.75}
+{'loss': 0.067, 'grad_norm': 0.6684255003929138, 'learning_rate': 1.175e-05, 'epoch': 0.77}
+{'loss': 0.0634, 'grad_norm': 0.8072683811187744, 'learning_rate': 1.05e-05, 'epoch': 0.8}
+{'eval_loss': 0.06050918251276016, 'eval_wer': 7.6830274938091305, 'eval_cer': 3.662109003477215, 'eval_runtime': 293.9299, 'eval_samples_per_second': 1.245, 'eval_steps_per_second': 0.078, 'epoch': 0.8}
+{'loss': 0.0583, 'grad_norm': 0.6890389323234558, 'learning_rate': 9.25e-06, 'epoch': 0.82}
+{'loss': 0.0653, 'grad_norm': 0.5965359807014465, 'learning_rate': 8.000000000000001e-06, 'epoch': 0.85}
+{'loss': 0.0704, 'grad_norm': 0.6871903538703918, 'learning_rate': 6.750000000000001e-06, 'epoch': 0.87}
+{'loss': 0.0702, 'grad_norm': 0.7824759483337402, 'learning_rate': 5.500000000000001e-06, 'epoch': 0.9}
+{'eval_loss': 0.05727394297719002, 'eval_wer': 7.613181789319958, 'eval_cer': 3.686457120682965, 'eval_runtime': 294.5051, 'eval_samples_per_second': 1.243, 'eval_steps_per_second': 0.078, 'epoch': 0.9}
+{'loss': 0.0656, 'grad_norm': 0.6378570199012756, 'learning_rate': 4.250000000000001e-06, 'epoch': 0.92}
+{'loss': 0.066, 'grad_norm': 0.7032338976860046, 'learning_rate': 3e-06, 'epoch': 0.95}
+{'loss': 0.0674, 'grad_norm': 0.7148113250732422, 'learning_rate': 1.7500000000000002e-06, 'epoch': 0.97}
+{'loss': 0.0622, 'grad_norm': 0.8107596039772034, 'learning_rate': 5.000000000000001e-07, 'epoch': 1.0}
+{'eval_loss': 0.05581846833229065, 'eval_wer': 7.356022604609816, 'eval_cer': 3.4726502164699795, 'eval_runtime': 292.0408, 'eval_samples_per_second': 1.253, 'eval_steps_per_second': 0.079, 'epoch': 1.0}
+{'train_runtime': 3971.2783, 'train_samples_per_second': 0.808, 'train_steps_per_second': 0.05, 'train_loss': 0.078482134193182, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 5...
+
+🔍 Starting inference and filtering for Fold 5...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 8
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ]
+}
+🧹 Removing checkpoint directory after fold 5...
+📉 Filtering samples with CER > 0.1 | Removed: 8
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ]
+}
+🧹 Removing checkpoint directory after fold 5...
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1615', 'train_424', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'train_979', 'validate_249', 'train_1681', 'train_942', 'train_2655', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_2096', 'train_1980', 'train_1270', 'train_1487', 'train_1134', 'train_1818', 'train_2178', 'train_1000', 'validate_656', 'train_246', 'train_2289', 'train_1831', 'train_2115', 'train_654', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_111', 'train_700', 'train_2321', 'train_1488', 'train_1738', 'train_1351', 'train_1866', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
+🧹 Removed IDs so far: 
+📁 Fold 6/10 - Using it as validation set
+['train_175', 'train_2526', 'train_2118', 'train_2805', 'train_721', 'train_942', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_1330', 'validate_530', 'train_1615', 'train_1532', 'train_2562', 'train_1483', 'train_2279', 'validate_249', 'train_1281', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'validate_606', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_1777', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'train_1315', 'train_1846', 'train_527', 'train_1697', 'train_1366', 'train_1211', 'train_1351', 'train_2242', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'train_1295', 'train_424', 'train_2528', 'train_1738', 'train_2522', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_2886', 'train_535', 'train_408', 'train_2096', 'train_1849']
+
+📁 Fold 6/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3202
+📊 Validation samples: 366
+
+🏋️ Training on Fold 6...
+📊 Train samples: 3202
+📊 Validation samples: 366
+
+🏋️ Training on Fold 6...
+{'loss': 0.1003, 'grad_norm': 1.3223005533218384, 'learning_rate': 4.875e-05, 'epoch': 0.02}
+{'loss': 0.0917, 'grad_norm': 0.8762727975845337, 'learning_rate': 4.75e-05, 'epoch': 0.05}
+{'loss': 0.0805, 'grad_norm': 1.149599552154541, 'learning_rate': 4.6250000000000006e-05, 'epoch': 0.07}
+{'loss': 0.0841, 'grad_norm': 1.0150337219238281, 'learning_rate': 4.525e-05, 'epoch': 0.1}
+{'eval_loss': 0.07624977827072144, 'eval_wer': 9.61470823341327, 'eval_cer': 4.86569843717633, 'eval_runtime': 290.2684, 'eval_samples_per_second': 1.261, 'eval_steps_per_second': 0.079, 'epoch': 0.1}
+{'loss': 0.0755, 'grad_norm': 1.6018691062927246, 'learning_rate': 4.4000000000000006e-05, 'epoch': 0.12}
+{'loss': 0.0888, 'grad_norm': 1.5988361835479736, 'learning_rate': 4.275e-05, 'epoch': 0.15}
+{'loss': 0.0903, 'grad_norm': 1.2341707944869995, 'learning_rate': 4.15e-05, 'epoch': 0.17}
+{'loss': 0.0823, 'grad_norm': 1.1975812911987305, 'learning_rate': 4.025e-05, 'epoch': 0.2}
+{'eval_loss': 0.07567888498306274, 'eval_wer': 9.665867306155077, 'eval_cer': 5.01607322331423, 'eval_runtime': 292.1929, 'eval_samples_per_second': 1.253, 'eval_steps_per_second': 0.079, 'epoch': 0.2}
+{'loss': 0.0853, 'grad_norm': 1.192237377166748, 'learning_rate': 3.9000000000000006e-05, 'epoch': 0.22}
+{'loss': 0.0787, 'grad_norm': 1.3828372955322266, 'learning_rate': 3.775e-05, 'epoch': 0.25}
+{'loss': 0.0757, 'grad_norm': 0.8415014743804932, 'learning_rate': 3.65e-05, 'epoch': 0.27}
+{'loss': 0.0793, 'grad_norm': 1.0048824548721313, 'learning_rate': 3.525e-05, 'epoch': 0.3}
+{'eval_loss': 0.07075836509466171, 'eval_wer': 9.435651478816947, 'eval_cer': 4.966971252330426, 'eval_runtime': 293.2638, 'eval_samples_per_second': 1.248, 'eval_steps_per_second': 0.078, 'epoch': 0.3}
+{'loss': 0.0765, 'grad_norm': 0.9510767459869385, 'learning_rate': 3.4000000000000007e-05, 'epoch': 0.32}
+{'loss': 0.0719, 'grad_norm': 0.92500901222229, 'learning_rate': 3.275e-05, 'epoch': 0.35}
+{'loss': 0.0662, 'grad_norm': 1.320563793182373, 'learning_rate': 3.15e-05, 'epoch': 0.37}
+{'loss': 0.0763, 'grad_norm': 0.9089210033416748, 'learning_rate': 3.025e-05, 'epoch': 0.4}
+{'eval_loss': 0.0681748315691948, 'eval_wer': 8.818545163868905, 'eval_cer': 4.59256872357892, 'eval_runtime': 292.9338, 'eval_samples_per_second': 1.249, 'eval_steps_per_second': 0.079, 'epoch': 0.4}
+{'loss': 0.0755, 'grad_norm': 0.8067336678504944, 'learning_rate': 2.9e-05, 'epoch': 0.42}
+{'loss': 0.0677, 'grad_norm': 1.092817783355713, 'learning_rate': 2.7750000000000004e-05, 'epoch': 0.45}
+{'loss': 0.0719, 'grad_norm': 0.8901805281639099, 'learning_rate': 2.6500000000000004e-05, 'epoch': 0.47}
+{'loss': 0.0695, 'grad_norm': 0.8408428430557251, 'learning_rate': 2.525e-05, 'epoch': 0.5}
+{'eval_loss': 0.06495597958564758, 'eval_wer': 8.214228617106315, 'eval_cer': 4.01868943770571, 'eval_runtime': 292.6391, 'eval_samples_per_second': 1.251, 'eval_steps_per_second': 0.079, 'epoch': 0.5}
+{'loss': 0.0672, 'grad_norm': 1.9990291595458984, 'learning_rate': 2.4e-05, 'epoch': 0.52}
+{'loss': 0.0657, 'grad_norm': 1.0706429481506348, 'learning_rate': 2.275e-05, 'epoch': 0.55}
+{'loss': 0.0672, 'grad_norm': 1.0388187170028687, 'learning_rate': 2.15e-05, 'epoch': 0.57}
+{'loss': 0.0718, 'grad_norm': 0.8309412002563477, 'learning_rate': 2.025e-05, 'epoch': 0.6}
+{'eval_loss': 0.06157698854804039, 'eval_wer': 8.127897681854517, 'eval_cer': 4.05398147935032, 'eval_runtime': 292.6215, 'eval_samples_per_second': 1.251, 'eval_steps_per_second': 0.079, 'epoch': 0.6}
+{'loss': 0.0666, 'grad_norm': 0.9044566750526428, 'learning_rate': 1.9e-05, 'epoch': 0.62}
+{'loss': 0.0717, 'grad_norm': 1.0353047847747803, 'learning_rate': 1.775e-05, 'epoch': 0.65}
+{'loss': 0.0667, 'grad_norm': 0.8183568716049194, 'learning_rate': 1.65e-05, 'epoch': 0.67}
+{'loss': 0.0579, 'grad_norm': 0.7608904242515564, 'learning_rate': 1.525e-05, 'epoch': 0.7}
+{'eval_loss': 0.05927123874425888, 'eval_wer': 8.003197442046362, 'eval_cer': 4.106152323520611, 'eval_runtime': 291.0003, 'eval_samples_per_second': 1.258, 'eval_steps_per_second': 0.079, 'epoch': 0.7}
+{'loss': 0.0624, 'grad_norm': 0.8133782744407654, 'learning_rate': 1.4000000000000001e-05, 'epoch': 0.72}
+{'loss': 0.0631, 'grad_norm': 0.7826041579246521, 'learning_rate': 1.2750000000000002e-05, 'epoch': 0.75}
+{'loss': 0.0655, 'grad_norm': 1.0075844526290894, 'learning_rate': 1.1500000000000002e-05, 'epoch': 0.77}
+{'loss': 0.0601, 'grad_norm': 0.8258023262023926, 'learning_rate': 1.025e-05, 'epoch': 0.8}
+{'eval_loss': 0.057061273604631424, 'eval_wer': 7.881694644284572, 'eval_cer': 3.951941445899602, 'eval_runtime': 359.13, 'eval_samples_per_second': 1.019, 'eval_steps_per_second': 0.064, 'epoch': 0.8}
+{'loss': 0.0552, 'grad_norm': 0.7096729278564453, 'learning_rate': 9e-06, 'epoch': 0.82}
+{'loss': 0.0605, 'grad_norm': 0.7204626798629761, 'learning_rate': 7.75e-06, 'epoch': 0.85}
+{'loss': 0.0533, 'grad_norm': 0.8888569474220276, 'learning_rate': 6.5000000000000004e-06, 'epoch': 0.87}
+{'loss': 0.0573, 'grad_norm': 1.5951502323150635, 'learning_rate': 5.25e-06, 'epoch': 0.9}
+{'eval_loss': 0.05367380753159523, 'eval_wer': 7.302957633892886, 'eval_cer': 3.6542607468102903, 'eval_runtime': 290.3779, 'eval_samples_per_second': 1.26, 'eval_steps_per_second': 0.079, 'epoch': 0.9}
+{'loss': 0.0553, 'grad_norm': 0.805448055267334, 'learning_rate': 4.000000000000001e-06, 'epoch': 0.92}
+{'loss': 0.0586, 'grad_norm': 0.6206341981887817, 'learning_rate': 2.7500000000000004e-06, 'epoch': 0.95}
+{'loss': 0.058, 'grad_norm': 0.706597626209259, 'learning_rate': 1.5e-06, 'epoch': 0.97}
+{'loss': 0.054, 'grad_norm': 0.6395015716552734, 'learning_rate': 2.5000000000000004e-07, 'epoch': 1.0}
+{'eval_loss': 0.05213209241628647, 'eval_wer': 7.101518784972022, 'eval_cer': 3.545315748689975, 'eval_runtime': 292.815, 'eval_samples_per_second': 1.25, 'eval_steps_per_second': 0.079, 'epoch': 1.0}
+{'train_runtime': 3992.4403, 'train_samples_per_second': 0.802, 'train_steps_per_second': 0.05, 'train_loss': 0.07066017806529999, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 6...
+
+🔍 Starting inference and filtering for Fold 6...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 12
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ]
+}
+🧹 Removing checkpoint directory after fold 6...
+📉 Filtering samples with CER > 0.1 | Removed: 12
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ]
+}
+🧹 Removing checkpoint directory after fold 6...
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1463', 'train_1615', 'train_424', 'train_2341', 'train_1776', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'train_979', 'validate_249', 'train_1913', 'train_1681', 'train_942', 'train_2655', 'train_205', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_2096', 'train_1980', 'train_1270', 'train_1487', 'train_1134', 'train_1818', 'train_2178', 'train_1083', 'train_1978', 'train_1000', 'validate_656', 'train_246', 'train_2289', 'train_1831', 'train_2115', 'train_654', 'train_686', 'train_1143', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_305', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1435', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_111', 'train_700', 'train_2321', 'train_1488', 'train_1738', 'train_1351', 'train_1866', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1689', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
+
+📁 Fold 7/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+🧹 Removed IDs so far: ['train_1978', 'train_175', 'train_2526', 'train_2118', 'train_2805', 'train_721', 'train_942', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_686', 'train_205', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_1330', 'validate_530', 'train_1615', 'train_1532', 'train_1083', 'train_2562', 'train_1483', 'train_2279', 'validate_249', 'train_1281', 'train_1143', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'train_1463', 'train_2341', 'validate_606', 'train_1435', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_1777', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'train_1315', 'train_1846', 'train_527', 'train_1697', 'train_1366', 'train_1211', 'train_1351', 'train_2242', 'train_305', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'train_1689', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'train_1295', 'train_1913', 'train_424', 'train_2528', 'train_1738', 'train_2522', 'train_1776', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_2886', 'train_535', 'train_408', 'train_2096', 'train_1849']
+
+📁 Fold 7/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3190
+📊 Validation samples: 366
+
+🏋️ Training on Fold 7...
+📊 Train samples: 3190
+📊 Validation samples: 366
+
+🏋️ Training on Fold 7...
+{'loss': 0.0933, 'grad_norm': 1.0878695249557495, 'learning_rate': 4.874371859296483e-05, 'epoch': 0.03}
+{'loss': 0.0834, 'grad_norm': 1.1584559679031372, 'learning_rate': 4.7738693467336685e-05, 'epoch': 0.05}
+{'loss': 0.0796, 'grad_norm': 1.4714256525039673, 'learning_rate': 4.648241206030151e-05, 'epoch': 0.08}
+{'loss': 0.0709, 'grad_norm': 1.0141894817352295, 'learning_rate': 4.522613065326633e-05, 'epoch': 0.1}
+{'eval_loss': 0.06658251583576202, 'eval_wer': 8.942227363279995, 'eval_cer': 4.425227718205926, 'eval_runtime': 288.1964, 'eval_samples_per_second': 1.27, 'eval_steps_per_second': 0.08, 'epoch': 0.1}
+{'loss': 0.0753, 'grad_norm': 1.0645132064819336, 'learning_rate': 4.396984924623116e-05, 'epoch': 0.13}
+{'loss': 0.0661, 'grad_norm': 1.516526460647583, 'learning_rate': 4.271356783919598e-05, 'epoch': 0.15}
+{'loss': 0.0771, 'grad_norm': 0.8588273525238037, 'learning_rate': 4.170854271356784e-05, 'epoch': 0.18}
+{'loss': 0.0721, 'grad_norm': 0.9645820260047913, 'learning_rate': 4.0452261306532664e-05, 'epoch': 0.2}
+{'eval_loss': 0.06309748440980911, 'eval_wer': 8.167855536276589, 'eval_cer': 3.923286828855836, 'eval_runtime': 289.8557, 'eval_samples_per_second': 1.263, 'eval_steps_per_second': 0.079, 'epoch': 0.2}
+{'loss': 0.072, 'grad_norm': 1.1469452381134033, 'learning_rate': 3.919597989949749e-05, 'epoch': 0.23}
+{'loss': 0.0756, 'grad_norm': 2.003744125366211, 'learning_rate': 3.793969849246231e-05, 'epoch': 0.25}
+{'loss': 0.0679, 'grad_norm': 1.14653742313385, 'learning_rate': 3.668341708542714e-05, 'epoch': 0.28}
+{'loss': 0.1013, 'grad_norm': 1.4225082397460938, 'learning_rate': 3.542713567839196e-05, 'epoch': 0.3}
+{'eval_loss': 0.06601681560277939, 'eval_wer': 8.726945569050832, 'eval_cer': 4.678888504554364, 'eval_runtime': 289.7231, 'eval_samples_per_second': 1.263, 'eval_steps_per_second': 0.079, 'epoch': 0.3}
+{'loss': 0.072, 'grad_norm': 1.3998851776123047, 'learning_rate': 3.4170854271356785e-05, 'epoch': 0.33}
+{'loss': 0.0688, 'grad_norm': 1.1131103038787842, 'learning_rate': 3.291457286432161e-05, 'epoch': 0.35}
+{'loss': 0.0751, 'grad_norm': 1.0071505308151245, 'learning_rate': 3.1658291457286434e-05, 'epoch': 0.38}
+{'loss': 0.0679, 'grad_norm': 0.7980033755302429, 'learning_rate': 3.0402010050251255e-05, 'epoch': 0.4}
+{'eval_loss': 0.05829737335443497, 'eval_wer': 7.647323436797121, 'eval_cer': 3.7511049617587147, 'eval_runtime': 297.5291, 'eval_samples_per_second': 1.23, 'eval_steps_per_second': 0.077, 'epoch': 0.4}
+{'loss': 0.066, 'grad_norm': 0.8953691124916077, 'learning_rate': 2.914572864321608e-05, 'epoch': 0.43}
+{'loss': 0.0639, 'grad_norm': 1.9648014307022095, 'learning_rate': 2.7889447236180903e-05, 'epoch': 0.45}
+{'loss': 0.0657, 'grad_norm': 0.824068009853363, 'learning_rate': 2.6633165829145728e-05, 'epoch': 0.48}
+{'loss': 0.0598, 'grad_norm': 0.9415256977081299, 'learning_rate': 2.5376884422110552e-05, 'epoch': 0.5}
+{'eval_loss': 0.05618518218398094, 'eval_wer': 7.547715442452285, 'eval_cer': 3.642722625773473, 'eval_runtime': 294.7898, 'eval_samples_per_second': 1.242, 'eval_steps_per_second': 0.078, 'epoch': 0.5}
+{'loss': 0.0678, 'grad_norm': 0.7956299781799316, 'learning_rate': 2.4120603015075376e-05, 'epoch': 0.53}
+{'loss': 0.0644, 'grad_norm': 0.769063413143158, 'learning_rate': 2.28643216080402e-05, 'epoch': 0.55}
+{'loss': 0.0644, 'grad_norm': 0.9747101068496704, 'learning_rate': 2.1608040201005025e-05, 'epoch': 0.58}
+{'loss': 0.0602, 'grad_norm': 0.7105571031570435, 'learning_rate': 2.035175879396985e-05, 'epoch': 0.6}
+{'eval_loss': 0.05356141924858093, 'eval_wer': 7.248891459417775, 'eval_cer': 3.5274222683423653, 'eval_runtime': 294.2711, 'eval_samples_per_second': 1.244, 'eval_steps_per_second': 0.078, 'epoch': 0.6}
+{'loss': 0.0614, 'grad_norm': 1.048702359199524, 'learning_rate': 1.9095477386934673e-05, 'epoch': 0.63}
+{'loss': 0.0551, 'grad_norm': 0.6432434320449829, 'learning_rate': 1.7839195979899497e-05, 'epoch': 0.65}
+{'loss': 0.0546, 'grad_norm': 0.6471238136291504, 'learning_rate': 1.6582914572864322e-05, 'epoch': 0.68}
+{'loss': 0.0562, 'grad_norm': 0.8025654554367065, 'learning_rate': 1.5326633165829146e-05, 'epoch': 0.7}
+{'eval_loss': 0.05044040083885193, 'eval_wer': 6.763704132125185, 'eval_cer': 3.1822898650985816, 'eval_runtime': 300.9554, 'eval_samples_per_second': 1.216, 'eval_steps_per_second': 0.076, 'epoch': 0.7}
+{'loss': 0.0566, 'grad_norm': 0.6368436813354492, 'learning_rate': 1.407035175879397e-05, 'epoch': 0.73}
+{'loss': 0.0556, 'grad_norm': 0.6044833064079285, 'learning_rate': 1.2814070351758795e-05, 'epoch': 0.75}
+{'loss': 0.0559, 'grad_norm': 0.675987184047699, 'learning_rate': 1.1557788944723619e-05, 'epoch': 0.78}
+{'loss': 0.0599, 'grad_norm': 0.6346427202224731, 'learning_rate': 1.0301507537688443e-05, 'epoch': 0.8}
+{'eval_loss': 0.0476568266749382, 'eval_wer': 6.525930210140736, 'eval_cer': 3.0516161266766595, 'eval_runtime': 292.3138, 'eval_samples_per_second': 1.252, 'eval_steps_per_second': 0.079, 'epoch': 0.8}
+{'loss': 0.0482, 'grad_norm': 0.6656053066253662, 'learning_rate': 9.045226130653267e-06, 'epoch': 0.83}
+{'loss': 0.0486, 'grad_norm': 0.7455078959465027, 'learning_rate': 7.788944723618092e-06, 'epoch': 0.85}
+{'loss': 0.0595, 'grad_norm': 1.0823863744735718, 'learning_rate': 6.532663316582915e-06, 'epoch': 0.88}
+{'loss': 0.0561, 'grad_norm': 1.3290785551071167, 'learning_rate': 5.276381909547739e-06, 'epoch': 0.9}
+{'eval_loss': 0.046131543815135956, 'eval_wer': 6.580553948975002, 'eval_cer': 3.077750874361044, 'eval_runtime': 292.0133, 'eval_samples_per_second': 1.253, 'eval_steps_per_second': 0.079, 'epoch': 0.9}
+{'loss': 0.0525, 'grad_norm': 0.5878564715385437, 'learning_rate': 4.020100502512563e-06, 'epoch': 0.93}
+{'loss': 0.0527, 'grad_norm': 0.9197841882705688, 'learning_rate': 2.7638190954773874e-06, 'epoch': 0.95}
+{'loss': 0.0499, 'grad_norm': 0.5646641850471497, 'learning_rate': 1.507537688442211e-06, 'epoch': 0.98}
+{'train_runtime': 3556.599, 'train_samples_per_second': 0.897, 'train_steps_per_second': 0.056, 'train_loss': 0.0652246767252534, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 7...
+
+🔍 Starting inference and filtering for Fold 7...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 10
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ]
+}
+🧹 Removing checkpoint directory after fold 7...
+🧹 Removed IDs so far: ['train_1804', 'train_1978', 'train_175', 'train_2526', 'train_2118', 'train_2805', 'train_721', 'train_942', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_686', 'train_205', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_1330', 'train_738', 'validate_530', 'train_1615', 'train_1532', 'train_1083', 'train_2562', 'train_1483', 'train_2279', 'validate_249', 'train_1281', 'train_1143', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'train_1463', 'train_2341', 'validate_606', 'train_1435', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_1777', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'validate_58', 'train_1315', 'train_1846', 'train_951', 'train_527', 'train_1697', 'train_1366', 'validate_664', 'train_1211', 'train_1351', 'train_2242', 'train_943', 'train_305', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'train_1689', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'validate_355', 'train_1295', 'train_587', 'train_1913', 'train_424', 'train_2528', 'train_1738', 'train_2522', 'train_1776', 'train_516', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_2886', 'train_535', 'train_408', 'train_2096', 'train_614', 'train_1849']
+
+📁 Fold 8/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+📉 Filtering samples with CER > 0.1 | Removed: 10
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ]
+}
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1463', 'train_1615', 'train_424', 'train_2341', 'train_1776', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'validate_355', 'train_979', 'validate_249', 'train_614', 'train_1913', 'train_1681', 'train_942', 'train_2655', 'train_205', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_943', 'train_2096', 'train_1980', 'train_1270', 'train_1804', 'train_1487', 'train_1134', 'train_1818', 'train_738', 'train_2178', 'validate_58', 'train_1083', 'train_1978', 'train_1000', 'validate_656', 'train_246', 'train_2289', 'train_516', 'train_1831', 'train_2115', 'train_654', 'train_686', 'train_1143', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_305', 'train_951', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1435', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_111', 'train_700', 'train_2321', 'train_1488', 'train_1738', 'train_1351', 'train_1866', 'validate_664', 'train_587', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1689', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
+
+📁 Fold 8/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3180
+📊 Validation samples: 366
+
+🏋️ Training on Fold 8...
+📊 Train samples: 3180
+📊 Validation samples: 366
+
+🏋️ Training on Fold 8...
+{'loss': 0.0851, 'grad_norm': 1.0525915622711182, 'learning_rate': 4.8737373737373736e-05, 'epoch': 0.03}
+{'loss': 0.066, 'grad_norm': 2.5889854431152344, 'learning_rate': 4.7474747474747476e-05, 'epoch': 0.05}
+{'loss': 0.0707, 'grad_norm': 0.9784640073776245, 'learning_rate': 4.621212121212121e-05, 'epoch': 0.08}
+{'loss': 0.0757, 'grad_norm': 1.162248969078064, 'learning_rate': 4.494949494949495e-05, 'epoch': 0.1}
+{'eval_loss': 0.07379856705665588, 'eval_wer': 8.953070906526477, 'eval_cer': 4.55499159197149, 'eval_runtime': 285.9091, 'eval_samples_per_second': 1.28, 'eval_steps_per_second': 0.08, 'epoch': 0.1}
+{'loss': 0.0757, 'grad_norm': 1.2124451398849487, 'learning_rate': 4.368686868686869e-05, 'epoch': 0.13}
+{'loss': 0.0597, 'grad_norm': 0.9884025454521179, 'learning_rate': 4.242424242424243e-05, 'epoch': 0.15}
+{'loss': 0.0643, 'grad_norm': nan, 'learning_rate': 4.141414141414142e-05, 'epoch': 0.18}
+{'loss': 0.0682, 'grad_norm': 1.193566083908081, 'learning_rate': 4.015151515151515e-05, 'epoch': 0.2}
+{'eval_loss': 0.06578589230775833, 'eval_wer': 8.526734196691883, 'eval_cer': 4.242583193199525, 'eval_runtime': 287.1948, 'eval_samples_per_second': 1.274, 'eval_steps_per_second': 0.08, 'epoch': 0.2}
+{'loss': 0.0684, 'grad_norm': 0.9713870286941528, 'learning_rate': 3.888888888888889e-05, 'epoch': 0.23}
+{'loss': 0.0643, 'grad_norm': 1.2413791418075562, 'learning_rate': 3.7626262626262624e-05, 'epoch': 0.25}
+{'loss': 0.0667, 'grad_norm': 1.1418687105178833, 'learning_rate': 3.6363636363636364e-05, 'epoch': 0.28}
+{'loss': 0.0617, 'grad_norm': 0.9361270070075989, 'learning_rate': 3.5101010101010104e-05, 'epoch': 0.3}
+{'eval_loss': 0.058845680207014084, 'eval_wer': 8.699833311963072, 'eval_cer': 4.546506425585091, 'eval_runtime': 287.3993, 'eval_samples_per_second': 1.273, 'eval_steps_per_second': 0.08, 'epoch': 0.3}
+{'loss': 0.0588, 'grad_norm': 0.8354899287223816, 'learning_rate': 3.3838383838383844e-05, 'epoch': 0.33}
+{'loss': 0.0589, 'grad_norm': 0.6699708104133606, 'learning_rate': 3.257575757575758e-05, 'epoch': 0.35}
+{'loss': 0.0639, 'grad_norm': 0.9952176809310913, 'learning_rate': 3.131313131313132e-05, 'epoch': 0.38}
+{'loss': 0.0618, 'grad_norm': 0.7452528476715088, 'learning_rate': 3.005050505050505e-05, 'epoch': 0.4}
+{'eval_loss': 0.054381776601076126, 'eval_wer': 7.5843056802154125, 'eval_cer': 3.6069670929819964, 'eval_runtime': 286.6063, 'eval_samples_per_second': 1.277, 'eval_steps_per_second': 0.08, 'epoch': 0.4}
+{'loss': 0.0566, 'grad_norm': 0.7814314961433411, 'learning_rate': 2.878787878787879e-05, 'epoch': 0.43}
+{'loss': 0.0558, 'grad_norm': 1.216706395149231, 'learning_rate': 2.7525252525252528e-05, 'epoch': 0.45}
+{'loss': 0.051, 'grad_norm': 1.007704257965088, 'learning_rate': 2.6262626262626268e-05, 'epoch': 0.48}
+{'loss': 0.0634, 'grad_norm': 1.0024893283843994, 'learning_rate': 2.5e-05, 'epoch': 0.5}
+{'eval_loss': 0.05261153727769852, 'eval_wer': 7.3246570073086295, 'eval_cer': 3.65942084882519, 'eval_runtime': 286.1294, 'eval_samples_per_second': 1.279, 'eval_steps_per_second': 0.08, 'epoch': 0.5}
+{'loss': 0.0592, 'grad_norm': 0.9270270466804504, 'learning_rate': 2.3737373737373738e-05, 'epoch': 0.53}
+{'loss': 0.0546, 'grad_norm': 0.5796003937721252, 'learning_rate': 2.2474747474747475e-05, 'epoch': 0.55}
+{'loss': 0.0577, 'grad_norm': 0.6979233026504517, 'learning_rate': 2.1212121212121215e-05, 'epoch': 0.58}
+{'loss': 0.0475, 'grad_norm': 0.6262112855911255, 'learning_rate': 2.0202020202020203e-05, 'epoch': 0.6}
+{'eval_loss': 0.05061789229512215, 'eval_wer': 7.212463136299525, 'eval_cer': 3.525200944167605, 'eval_runtime': 307.461, 'eval_samples_per_second': 1.19, 'eval_steps_per_second': 0.075, 'epoch': 0.6}
+{'loss': 0.0562, 'grad_norm': 0.6891656517982483, 'learning_rate': 1.893939393939394e-05, 'epoch': 0.63}
+{'loss': 0.0508, 'grad_norm': 0.7809681296348572, 'learning_rate': 1.7676767676767676e-05, 'epoch': 0.65}
+{'loss': 0.0523, 'grad_norm': 0.5925467014312744, 'learning_rate': 1.6414141414141416e-05, 'epoch': 0.68}
+{'loss': 0.0432, 'grad_norm': 0.5801781415939331, 'learning_rate': 1.5151515151515153e-05, 'epoch': 0.7}
+{'eval_loss': 0.04725813865661621, 'eval_wer': 6.869470444928837, 'eval_cer': 3.387124145698021, 'eval_runtime': 288.5533, 'eval_samples_per_second': 1.268, 'eval_steps_per_second': 0.08, 'epoch': 0.7}
+{'loss': 0.048, 'grad_norm': 0.7039755582809448, 'learning_rate': 1.388888888888889e-05, 'epoch': 0.73}
+{'loss': 0.0484, 'grad_norm': 0.6973634362220764, 'learning_rate': 1.2626262626262628e-05, 'epoch': 0.75}
+{'loss': 0.0514, 'grad_norm': 0.7105414271354675, 'learning_rate': 1.1363636363636365e-05, 'epoch': 0.78}
+{'loss': 0.0485, 'grad_norm': 0.5760175585746765, 'learning_rate': 1.0101010101010101e-05, 'epoch': 0.81}
+{'eval_loss': 0.04591016098856926, 'eval_wer': 6.840620592383639, 'eval_cer': 3.4388065227788154, 'eval_runtime': 287.628, 'eval_samples_per_second': 1.272, 'eval_steps_per_second': 0.08, 'epoch': 0.81}
+{'loss': 0.0465, 'grad_norm': 0.49680063128471375, 'learning_rate': 8.838383838383838e-06, 'epoch': 0.83}
+{'loss': 0.0488, 'grad_norm': 0.5802470445632935, 'learning_rate': 7.5757575757575764e-06, 'epoch': 0.86}
+{'loss': 0.0471, 'grad_norm': 0.555828332901001, 'learning_rate': 6.313131313131314e-06, 'epoch': 0.88}
+{'loss': 0.0479, 'grad_norm': 0.47203513979911804, 'learning_rate': 5.050505050505051e-06, 'epoch': 0.91}
+{'eval_loss': 0.043719928711652756, 'eval_wer': 6.542505449416591, 'eval_cer': 3.169595334701245, 'eval_runtime': 290.9149, 'eval_samples_per_second': 1.258, 'eval_steps_per_second': 0.079, 'epoch': 0.91}
+{'loss': 0.0494, 'grad_norm': 0.5705248117446899, 'learning_rate': 3.7878787878787882e-06, 'epoch': 0.93}
+{'loss': 0.0463, 'grad_norm': 0.6363642811775208, 'learning_rate': 2.5252525252525253e-06, 'epoch': 0.96}
+{'loss': 0.0506, 'grad_norm': 0.6133898496627808, 'learning_rate': 1.2626262626262627e-06, 'epoch': 0.98}
+{'train_runtime': 3499.0822, 'train_samples_per_second': 0.909, 'train_steps_per_second': 0.057, 'train_loss': 0.05765844497716788, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 8...
+
+🔍 Starting inference and filtering for Fold 8...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 8
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ]
+}
+🧹 Removing checkpoint directory after fold 8...
+🧹 Removed IDs so far: ['train_1804', 'train_1978', 'train_175', 'train_2526', 'train_2118', 'train_2805', 'train_721', 'train_942', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_686', 'train_2000', 'train_205', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_1330', 'train_738', 'validate_530', 'train_1615', 'train_1532', 'train_2857', 'train_1083', 'train_2562', 'train_1719', 'train_1483', 'train_2279', 'validate_249', 'train_1281', 'train_1143', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'train_1463', 'train_2341', 'validate_606', 'train_1549', 'train_1435', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'train_1777', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'validate_58', 'train_1315', 'train_1846', 'train_951', 'train_527', 'train_1697', 'train_1366', 'validate_664', 'train_1211', 'train_1351', 'train_2242', 'train_943', 'train_305', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'train_1689', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'validate_355', 'train_1295', 'train_587', 'train_1913', 'train_716', 'train_424', 'train_2528', 'train_1738', 'train_2410', 'train_2522', 'train_1776', 'train_516', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1980', 'train_2886', 'train_2180', 'train_535', 'train_408', 'train_2096', 'train_614', 'train_2719', 'train_1849']
+
+📁 Fold 9/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+📉 Filtering samples with CER > 0.1 | Removed: 8
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ]
+}
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1463', 'train_1615', 'train_424', 'train_2341', 'train_1776', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'validate_355', 'train_979', 'validate_249', 'train_614', 'train_1913', 'train_2410', 'train_1681', 'train_942', 'train_2655', 'train_205', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_2857', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_943', 'train_1549', 'train_2096', 'train_1980', 'train_1270', 'train_1804', 'train_1487', 'train_1134', 'train_1818', 'train_2180', 'train_738', 'train_2178', 'validate_58', 'train_1083', 'train_1978', 'train_1000', 'validate_656', 'train_246', 'train_2289', 'train_516', 'train_1831', 'train_2115', 'train_654', 'train_686', 'train_1143', 'train_716', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_305', 'train_951', 'train_2719', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2000', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1435', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_111', 'train_700', 'train_1719', 'train_2321', 'train_1488', 'train_1738', 'train_1351', 'train_1866', 'validate_664', 'train_587', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1689', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
+
+📁 Fold 9/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3172
+📊 Validation samples: 366
+
+🏋️ Training on Fold 9...
+📊 Train samples: 3172
+📊 Validation samples: 366
+
+🏋️ Training on Fold 9...
+{'loss': 0.0849, 'grad_norm': 0.8592950701713562, 'learning_rate': 4.8737373737373736e-05, 'epoch': 0.03}
+{'loss': 0.0678, 'grad_norm': 0.7957229614257812, 'learning_rate': 4.7474747474747476e-05, 'epoch': 0.05}
+{'loss': 0.0727, 'grad_norm': 1.2466849088668823, 'learning_rate': 4.6464646464646464e-05, 'epoch': 0.08}
+{'loss': 0.0667, 'grad_norm': 0.859424889087677, 'learning_rate': 4.545454545454546e-05, 'epoch': 0.1}
+{'eval_loss': 0.057535577565431595, 'eval_wer': 8.050455053488744, 'eval_cer': 3.9653387523484533, 'eval_runtime': 285.1838, 'eval_samples_per_second': 1.283, 'eval_steps_per_second': 0.081, 'epoch': 0.1}
+{'loss': 0.061, 'grad_norm': 0.8060463070869446, 'learning_rate': 4.41919191919192e-05, 'epoch': 0.13}
+{'loss': 0.064, 'grad_norm': 1.2409405708312988, 'learning_rate': 4.292929292929293e-05, 'epoch': 0.15}
+{'loss': 0.0681, 'grad_norm': 1.372043251991272, 'learning_rate': 4.166666666666667e-05, 'epoch': 0.18}
+{'loss': 0.0656, 'grad_norm': 1.2945846319198608, 'learning_rate': 4.0404040404040405e-05, 'epoch': 0.2}
+{'eval_loss': 0.051475394517183304, 'eval_wer': 7.903560593964554, 'eval_cer': 4.121774471837736, 'eval_runtime': 288.3014, 'eval_samples_per_second': 1.27, 'eval_steps_per_second': 0.08, 'epoch': 0.2}
+{'loss': 0.0608, 'grad_norm': 0.9109919667243958, 'learning_rate': 3.9141414141414145e-05, 'epoch': 0.23}
+{'loss': 0.0626, 'grad_norm': 1.014777421951294, 'learning_rate': 3.787878787878788e-05, 'epoch': 0.25}
+{'loss': 0.053, 'grad_norm': 1.2297865152359009, 'learning_rate': 3.661616161616162e-05, 'epoch': 0.28}
+{'loss': 0.0633, 'grad_norm': 1.800711750984192, 'learning_rate': 3.535353535353535e-05, 'epoch': 0.3}
+{'eval_loss': 0.05715746060013771, 'eval_wer': 8.74341369950503, 'eval_cer': 4.562708485104099, 'eval_runtime': 320.9879, 'eval_samples_per_second': 1.14, 'eval_steps_per_second': 0.072, 'epoch': 0.3}
+{'loss': 0.0638, 'grad_norm': 0.84732985496521, 'learning_rate': 3.409090909090909e-05, 'epoch': 0.33}
+{'loss': 0.0584, 'grad_norm': 0.8895207047462463, 'learning_rate': 3.282828282828283e-05, 'epoch': 0.35}
+{'loss': 0.0537, 'grad_norm': 0.8484135270118713, 'learning_rate': 3.1565656565656566e-05, 'epoch': 0.38}
+{'loss': 0.0566, 'grad_norm': 0.8435284495353699, 'learning_rate': 3.0303030303030306e-05, 'epoch': 0.4}
+{'eval_loss': 0.05003158375620842, 'eval_wer': 7.571451381127255, 'eval_cer': 3.9983129481231545, 'eval_runtime': 287.0893, 'eval_samples_per_second': 1.275, 'eval_steps_per_second': 0.08, 'epoch': 0.4}
+{'loss': 0.0509, 'grad_norm': 0.5974923968315125, 'learning_rate': 2.904040404040404e-05, 'epoch': 0.43}
+{'loss': 0.0597, 'grad_norm': 0.84563809633255, 'learning_rate': 2.777777777777778e-05, 'epoch': 0.45}
+{'loss': 0.049, 'grad_norm': 0.8385303020477295, 'learning_rate': 2.6515151515151516e-05, 'epoch': 0.48}
+{'loss': 0.0533, 'grad_norm': 0.8718958497047424, 'learning_rate': 2.5252525252525256e-05, 'epoch': 0.5}
+{'eval_loss': 0.045697275549173355, 'eval_wer': 7.280855819894619, 'eval_cer': 3.8296077604386336, 'eval_runtime': 312.2398, 'eval_samples_per_second': 1.172, 'eval_steps_per_second': 0.074, 'epoch': 0.5}
+{'loss': 0.053, 'grad_norm': 0.7498385906219482, 'learning_rate': 2.398989898989899e-05, 'epoch': 0.53}
+{'loss': 0.0566, 'grad_norm': 1.342937707901001, 'learning_rate': 2.272727272727273e-05, 'epoch': 0.55}
+{'loss': 0.053, 'grad_norm': 0.9719470739364624, 'learning_rate': 2.1464646464646466e-05, 'epoch': 0.58}
+{'loss': 0.0538, 'grad_norm': 0.6854355335235596, 'learning_rate': 2.0202020202020203e-05, 'epoch': 0.61}
+{'eval_loss': 0.044976793229579926, 'eval_wer': 7.446910426313269, 'eval_cer': 4.049691346190714, 'eval_runtime': 289.0896, 'eval_samples_per_second': 1.266, 'eval_steps_per_second': 0.08, 'epoch': 0.61}
+{'loss': 0.0495, 'grad_norm': 0.6292111873626709, 'learning_rate': 1.893939393939394e-05, 'epoch': 0.63}
+{'loss': 0.051, 'grad_norm': 0.6927850246429443, 'learning_rate': 1.7676767676767676e-05, 'epoch': 0.66}
+{'loss': 0.0458, 'grad_norm': 0.7658417224884033, 'learning_rate': 1.6414141414141416e-05, 'epoch': 0.68}
+{'loss': 0.0449, 'grad_norm': 0.723616361618042, 'learning_rate': 1.5151515151515153e-05, 'epoch': 0.71}
+{'eval_loss': 0.041578516364097595, 'eval_wer': 6.6453776145617125, 'eval_cer': 3.4293163605689965, 'eval_runtime': 287.9642, 'eval_samples_per_second': 1.271, 'eval_steps_per_second': 0.08, 'epoch': 0.71}
+{'loss': 0.0438, 'grad_norm': 0.7495134472846985, 'learning_rate': 1.388888888888889e-05, 'epoch': 0.73}
+{'loss': 0.0526, 'grad_norm': 0.9217445254325867, 'learning_rate': 1.2626262626262628e-05, 'epoch': 0.76}
+{'loss': 0.0411, 'grad_norm': 0.6849497556686401, 'learning_rate': 1.1363636363636365e-05, 'epoch': 0.78}
+{'loss': 0.0471, 'grad_norm': 0.6470396518707275, 'learning_rate': 1.0101010101010101e-05, 'epoch': 0.81}
+{'eval_loss': 0.03853923827409744, 'eval_wer': 6.626217467667252, 'eval_cer': 3.5251715808442925, 'eval_runtime': 288.9826, 'eval_samples_per_second': 1.267, 'eval_steps_per_second': 0.08, 'epoch': 0.81}
+{'loss': 0.0404, 'grad_norm': 0.6015588641166687, 'learning_rate': 8.838383838383838e-06, 'epoch': 0.83}
+{'loss': 0.0422, 'grad_norm': 0.7605725526809692, 'learning_rate': 7.5757575757575764e-06, 'epoch': 0.86}
+{'loss': 0.0412, 'grad_norm': 0.5423453450202942, 'learning_rate': 6.313131313131314e-06, 'epoch': 0.88}
+{'loss': 0.0373, 'grad_norm': 0.4997778832912445, 'learning_rate': 5.050505050505051e-06, 'epoch': 0.91}
+{'eval_loss': 0.03622704744338989, 'eval_wer': 6.297301612645696, 'eval_cer': 3.3050879950922125, 'eval_runtime': 291.5697, 'eval_samples_per_second': 1.255, 'eval_steps_per_second': 0.079, 'epoch': 0.91}
+{'loss': 0.0383, 'grad_norm': 0.8331701159477234, 'learning_rate': 3.7878787878787882e-06, 'epoch': 0.93}
+{'loss': 0.0413, 'grad_norm': 0.6040348410606384, 'learning_rate': 2.5252525252525253e-06, 'epoch': 0.96}
+{'loss': 0.0384, 'grad_norm': 0.508490264415741, 'learning_rate': 1.2626262626262627e-06, 'epoch': 0.98}
+{'train_runtime': 3555.2894, 'train_samples_per_second': 0.892, 'train_steps_per_second': 0.056, 'train_loss': 0.05365519421269195, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 9...
+
+🔍 Starting inference and filtering for Fold 9...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 12
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ],
+  "fold_9": [
+    "train_2395",
+    "validate_593",
+    "train_1542",
+    "validate_28",
+    "train_264",
+    "train_1625",
+    "validate_490",
+    "train_996",
+    "train_1470",
+    "validate_399",
+    "train_2518",
+    "train_658"
+  ]
+}
+🧹 Removing checkpoint directory after fold 9...
+📉 Filtering samples with CER > 0.1 | Removed: 12
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ],
+  "fold_9": [
+    "train_2395",
+    "validate_593",
+    "train_1542",
+    "validate_28",
+    "train_264",
+    "train_1625",
+    "validate_490",
+    "train_996",
+    "train_1470",
+    "validate_399",
+    "train_2518",
+    "train_658"
+  ]
+}
+🧹 Removing checkpoint directory after fold 9...
+🧹 Removed IDs so far: ['train_1804', 'train_1978', 'train_175', 'train_2526', 'train_2118', 'train_2805', 'train_721', 'train_942', 'validate_28', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_686', 'train_2000', 'train_205', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_996', 'train_1330', 'train_738', 'validate_530', 'train_1615', 'train_1532', 'train_2857', 'train_1083', 'train_2562', 'train_264', 'train_1719', 'train_1483', 'train_2279', 'train_658', 'validate_249', 'train_1281', 'train_1143', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'train_1463', 'train_2341', 'validate_606', 'train_1549', 'train_1435', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'validate_593', 'train_1777', 'train_1625', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'validate_58', 'train_1315', 'train_1846', 'train_951', 'train_527', 'train_1697', 'train_1366', 'validate_664', 'train_1211', 'train_1351', 'validate_399', 'train_2242', 'train_943', 'train_1470', 'train_305', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'train_2518', 'train_1689', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'validate_355', 'train_1295', 'train_587', 'train_1913', 'train_716', 'validate_490', 'train_424', 'train_2395', 'train_2528', 'train_1738', 'train_2410', 'train_2522', 'train_1776', 'train_516', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1542', 'train_1980', 'train_2886', 'train_2180', 'train_535', 'train_408', 'train_2096', 'train_614', 'train_2719', 'train_1849']
+
+📁 Fold 10/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1463', 'train_1615', 'train_424', 'train_2341', 'validate_593', 'train_1776', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'validate_355', 'train_979', 'validate_249', 'train_614', 'train_2395', 'train_1913', 'train_2410', 'train_1681', 'train_942', 'train_2655', 'train_205', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'train_264', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_2857', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_943', 'train_1549', 'train_2096', 'train_1980', 'train_1270', 'train_1804', 'train_1487', 'train_1134', 'train_1818', 'train_2180', 'train_738', 'train_2178', 'validate_58', 'train_1083', 'train_1978', 'train_1000', 'train_658', 'validate_656', 'validate_490', 'train_246', 'train_2289', 'train_516', 'train_1831', 'train_2115', 'train_654', 'train_686', 'train_1143', 'train_716', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_305', 'train_951', 'train_2719', 'train_996', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1697', 'validate_477', 'train_1211', 'train_2518', 'validate_28', 'train_2000', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1435', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_1470', 'train_111', 'train_700', 'train_1719', 'train_2321', 'train_1488', 'validate_399', 'train_1625', 'train_1738', 'train_1351', 'train_1866', 'validate_664', 'train_587', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1542', 'train_1689', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
+
+📁 Fold 10/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...
+⚙️ Preprocessing val_subset...
+📊 Train samples: 3160
+📊 Validation samples: 366
+
+🏋️ Training on Fold 10...
+📊 Train samples: 3160
+📊 Validation samples: 366
+
+🏋️ Training on Fold 10...
+{'loss': 0.059, 'grad_norm': 1.4806970357894897, 'learning_rate': 4.873096446700508e-05, 'epoch': 0.03}
+{'loss': 0.0623, 'grad_norm': 1.12706458568573, 'learning_rate': 4.746192893401015e-05, 'epoch': 0.05}
+{'loss': 0.0649, 'grad_norm': 0.7796375155448914, 'learning_rate': 4.619289340101523e-05, 'epoch': 0.08}
+{'loss': 0.0588, 'grad_norm': 1.2049908638000488, 'learning_rate': 4.492385786802031e-05, 'epoch': 0.1}
+{'eval_loss': 0.05619928240776062, 'eval_wer': 8.682961252245317, 'eval_cer': 4.3971173000453785, 'eval_runtime': 286.7803, 'eval_samples_per_second': 1.276, 'eval_steps_per_second': 0.08, 'epoch': 0.1}
+{'loss': 0.0553, 'grad_norm': 1.0879104137420654, 'learning_rate': 4.3908629441624365e-05, 'epoch': 0.13}
+{'loss': 0.0609, 'grad_norm': 0.8046286702156067, 'learning_rate': 4.2639593908629446e-05, 'epoch': 0.15}
+{'loss': 0.0577, 'grad_norm': 0.8686467409133911, 'learning_rate': 4.137055837563452e-05, 'epoch': 0.18}
+{'loss': 0.0564, 'grad_norm': 1.0894578695297241, 'learning_rate': 4.010152284263959e-05, 'epoch': 0.2}
+{'eval_loss': 0.0504230298101902, 'eval_wer': 7.544264819091609, 'eval_cer': 3.8564187760062145, 'eval_runtime': 307.5541, 'eval_samples_per_second': 1.19, 'eval_steps_per_second': 0.075, 'epoch': 0.2}
+{'loss': 0.0591, 'grad_norm': 0.8667689561843872, 'learning_rate': 3.8832487309644673e-05, 'epoch': 0.23}
+{'loss': 0.0607, 'grad_norm': 1.0344469547271729, 'learning_rate': 3.756345177664975e-05, 'epoch': 0.25}
+{'loss': 0.0512, 'grad_norm': 0.6722348928451538, 'learning_rate': 3.629441624365482e-05, 'epoch': 0.28}
+{'loss': 0.0539, 'grad_norm': 0.7743960022926331, 'learning_rate': 3.50253807106599e-05, 'epoch': 0.3}
+{'eval_loss': 0.04624394327402115, 'eval_wer': 7.435206569155762, 'eval_cer': 3.9010283270649224, 'eval_runtime': 289.4625, 'eval_samples_per_second': 1.264, 'eval_steps_per_second': 0.079, 'epoch': 0.3}
+{'loss': 0.0523, 'grad_norm': 0.6743364930152893, 'learning_rate': 3.3756345177664975e-05, 'epoch': 0.33}
+{'loss': 0.0499, 'grad_norm': 0.9011096358299255, 'learning_rate': 3.248730964467005e-05, 'epoch': 0.35}
+{'loss': 0.0537, 'grad_norm': 0.7789183259010315, 'learning_rate': 3.121827411167513e-05, 'epoch': 0.38}
+{'loss': 0.0469, 'grad_norm': 0.86814945936203, 'learning_rate': 2.9949238578680206e-05, 'epoch': 0.41}
+{'eval_loss': 0.04403878375887871, 'eval_wer': 6.771234282781627, 'eval_cer': 3.3111054708230463, 'eval_runtime': 291.5095, 'eval_samples_per_second': 1.256, 'eval_steps_per_second': 0.079, 'epoch': 0.41}
+{'loss': 0.0491, 'grad_norm': 0.8501203060150146, 'learning_rate': 2.8680203045685283e-05, 'epoch': 0.43}
+{'loss': 0.046, 'grad_norm': 0.6400884985923767, 'learning_rate': 2.7411167512690357e-05, 'epoch': 0.46}
+{'loss': 0.0461, 'grad_norm': 1.2955002784729004, 'learning_rate': 2.6142131979695434e-05, 'epoch': 0.48}
+{'loss': 0.0461, 'grad_norm': 0.8676304817199707, 'learning_rate': 2.4873096446700507e-05, 'epoch': 0.51}
+{'eval_loss': 0.04207169637084007, 'eval_wer': 6.771234282781627, 'eval_cer': 3.418014567325811, 'eval_runtime': 290.8168, 'eval_samples_per_second': 1.259, 'eval_steps_per_second': 0.079, 'epoch': 0.51}
+{'loss': 0.052, 'grad_norm': 0.8202059268951416, 'learning_rate': 2.3604060913705588e-05, 'epoch': 0.53}
+{'loss': 0.0496, 'grad_norm': 0.6825297474861145, 'learning_rate': 2.233502538071066e-05, 'epoch': 0.56}
+{'loss': 0.0447, 'grad_norm': 1.0168062448501587, 'learning_rate': 2.1065989847715735e-05, 'epoch': 0.58}
+{'loss': 0.0437, 'grad_norm': 0.7633541822433472, 'learning_rate': 1.9796954314720815e-05, 'epoch': 0.61}
+{'eval_loss': 0.040002886205911636, 'eval_wer': 7.037464716448551, 'eval_cer': 3.814116615519509, 'eval_runtime': 286.0358, 'eval_samples_per_second': 1.28, 'eval_steps_per_second': 0.08, 'epoch': 0.61}
+{'loss': 0.0476, 'grad_norm': 0.7678560614585876, 'learning_rate': 1.852791878172589e-05, 'epoch': 0.63}
+{'loss': 0.0454, 'grad_norm': 0.5914775729179382, 'learning_rate': 1.7258883248730966e-05, 'epoch': 0.66}
+{'loss': 0.0425, 'grad_norm': 0.7065778374671936, 'learning_rate': 1.5989847715736043e-05, 'epoch': 0.68}
+{'loss': 0.0379, 'grad_norm': 0.6642545461654663, 'learning_rate': 1.4720812182741117e-05, 'epoch': 0.71}
+{'eval_loss': 0.036964744329452515, 'eval_wer': 6.136130356684629, 'eval_cer': 3.0695985909534906, 'eval_runtime': 288.7816, 'eval_samples_per_second': 1.267, 'eval_steps_per_second': 0.08, 'epoch': 0.71}
+{'loss': 0.0392, 'grad_norm': 0.510334312915802, 'learning_rate': 1.3451776649746192e-05, 'epoch': 0.73}
+{'loss': 0.0408, 'grad_norm': 0.669273316860199, 'learning_rate': 1.218274111675127e-05, 'epoch': 0.76}
+{'loss': 0.0426, 'grad_norm': 0.58907550573349, 'learning_rate': 1.0913705583756344e-05, 'epoch': 0.78}
+{'loss': 0.0355, 'grad_norm': 1.2851816415786743, 'learning_rate': 9.644670050761421e-06, 'epoch': 0.81}
+{'eval_loss': 0.03422410413622856, 'eval_wer': 5.937259430331024, 'eval_cer': 3.0303729512294546, 'eval_runtime': 771.0542, 'eval_samples_per_second': 0.475, 'eval_steps_per_second': 0.03, 'epoch': 0.81}
+{'loss': 0.0394, 'grad_norm': 0.5602822303771973, 'learning_rate': 8.375634517766498e-06, 'epoch': 0.84}
+{'loss': 0.0428, 'grad_norm': 0.5642244219779968, 'learning_rate': 7.106598984771575e-06, 'epoch': 0.86}
+{'loss': 0.0395, 'grad_norm': 0.5170848965644836, 'learning_rate': 5.83756345177665e-06, 'epoch': 0.89}
+{'loss': 0.0378, 'grad_norm': 0.5635671615600586, 'learning_rate': 4.568527918781726e-06, 'epoch': 0.91}
+{'eval_loss': 0.031780071556568146, 'eval_wer': 5.61008468052348, 'eval_cer': 2.7788673788812233, 'eval_runtime': 324.2098, 'eval_samples_per_second': 1.129, 'eval_steps_per_second': 0.071, 'epoch': 0.91}
+{'loss': 0.0346, 'grad_norm': 0.4712419807910919, 'learning_rate': 3.2994923857868023e-06, 'epoch': 0.94}
+{'loss': 0.0382, 'grad_norm': 0.5191996097564697, 'learning_rate': 2.030456852791878e-06, 'epoch': 0.96}
+{'loss': 0.0352, 'grad_norm': 0.7003815174102783, 'learning_rate': 7.614213197969544e-07, 'epoch': 0.99}
+{'train_runtime': 4126.9124, 'train_samples_per_second': 0.766, 'train_steps_per_second': 0.048, 'train_loss': 0.048079213363870145, 'epoch': 1.0}
+
+🔍 Starting inference and filtering for Fold 10...
+
+🔍 Starting inference and filtering for Fold 10...
+📊 Computing CER per sample...
+📊 Computing CER per sample...
+📉 Filtering samples with CER > 0.1 | Removed: 2
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ],
+  "fold_9": [
+    "train_2395",
+    "validate_593",
+    "train_1542",
+    "validate_28",
+    "train_264",
+    "train_1625",
+    "validate_490",
+    "train_996",
+    "train_1470",
+    "validate_399",
+    "train_2518",
+    "train_658"
+  ],
+  "fold_10": [
+    "train_186",
+    "train_1434"
+  ]
+}
+🧹 Removing checkpoint directory after fold 10...
+🧹 Removed IDs so far: ['train_186', 'train_1804', 'train_1978', 'train_175', 'train_2526', 'train_2118', 'train_1434', 'train_2805', 'train_721', 'train_942', 'validate_28', 'validate_656', 'train_111', 'train_1000', 'train_2588', 'validate_688', 'train_686', 'train_2000', 'train_205', 'train_979', 'train_1001', 'train_1361', 'train_1157', 'train_996', 'train_1330', 'train_738', 'validate_530', 'train_1615', 'train_1532', 'train_2857', 'train_1083', 'train_2562', 'train_264', 'train_1719', 'train_1483', 'train_2279', 'train_658', 'validate_249', 'train_1281', 'train_1143', 'train_1650', 'train_700', 'train_1487', 'train_2131', 'train_1831', 'train_2325', 'train_1097', 'train_650', 'train_654', 'train_2321', 'train_2011', 'train_2655', 'train_2115', 'train_1042', 'train_1488', 'train_1105', 'train_150', 'validate_385', 'train_1463', 'train_2341', 'validate_606', 'train_1549', 'train_1435', 'train_1681', 'train_220', 'train_1964', 'train_1909', 'validate_593', 'train_1777', 'train_1625', 'train_1425', 'train_2178', 'train_246', 'train_1656', 'validate_477', 'train_2925', 'validate_58', 'train_1315', 'train_1846', 'train_951', 'train_527', 'train_1697', 'train_1366', 'validate_664', 'train_1211', 'train_1351', 'validate_399', 'train_2242', 'train_943', 'train_1470', 'train_305', 'train_1477', 'train_1957', 'train_1818', 'train_866', 'train_2518', 'train_1689', 'validate_8', 'validate_15', 'train_2289', 'train_328', 'train_1134', 'validate_484', 'train_1866', 'validate_355', 'train_1295', 'train_587', 'train_1913', 'train_716', 'validate_490', 'train_424', 'train_2395', 'train_2528', 'train_1738', 'train_2410', 'train_2522', 'train_1776', 'train_516', 'train_1270', 'validate_222', 'train_1660', 'train_2340', 'train_2527', 'train_2183', 'train_1436', 'validate_424', 'train_1542', 'train_1980', 'train_2886', 'train_2180', 'train_535', 'train_408', 'train_2096', 'train_614', 'train_2719', 'train_1849']
+📉 Filtering samples with CER > 0.1 | Removed: 2
+
+📜 🔍 Removed IDs so far:
+{
+  "fold_1": [
+    "train_2242",
+    "train_1097",
+    "train_1134",
+    "train_527",
+    "train_1488",
+    "train_1980",
+    "train_1315",
+    "train_1660",
+    "train_1211",
+    "train_2925",
+    "train_2340",
+    "train_1681",
+    "train_1777",
+    "validate_8",
+    "train_1270",
+    "train_1849",
+    "train_700",
+    "train_1001",
+    "train_1846",
+    "train_2527",
+    "train_1436",
+    "train_2096",
+    "train_2011",
+    "train_1831",
+    "train_1105",
+    "train_1909",
+    "train_408",
+    "train_1532"
+  ],
+  "fold_2": [
+    "train_1157",
+    "train_2655",
+    "train_1738",
+    "train_721",
+    "validate_477",
+    "validate_656",
+    "train_1330",
+    "train_1295",
+    "train_1697",
+    "train_1615",
+    "train_175",
+    "train_650",
+    "train_2522",
+    "train_1425",
+    "train_246",
+    "validate_15",
+    "validate_385",
+    "train_2805",
+    "train_1042",
+    "train_1281",
+    "train_2183",
+    "validate_688"
+  ],
+  "fold_3": [
+    "train_1361",
+    "train_1483",
+    "validate_530",
+    "train_654",
+    "train_2115",
+    "train_2321",
+    "train_1964",
+    "validate_424",
+    "train_2178",
+    "train_1818",
+    "train_220",
+    "train_2279",
+    "train_535",
+    "train_111",
+    "train_2526",
+    "train_1650",
+    "train_1351",
+    "train_942",
+    "train_1366",
+    "validate_222"
+  ],
+  "fold_4": [
+    "validate_606",
+    "train_328",
+    "validate_484",
+    "train_2562",
+    "train_2886",
+    "train_1487",
+    "validate_249",
+    "train_2588",
+    "train_2289",
+    "train_979",
+    "train_1866",
+    "train_1957",
+    "train_424",
+    "train_2131"
+  ],
+  "fold_5": [
+    "train_2118",
+    "train_1656",
+    "train_1000",
+    "train_1477",
+    "train_150",
+    "train_2528",
+    "train_866",
+    "train_2325"
+  ],
+  "fold_6": [
+    "train_1689",
+    "train_205",
+    "train_1083",
+    "train_1978",
+    "train_686",
+    "train_305",
+    "train_1143",
+    "train_1435",
+    "train_2341",
+    "train_1776",
+    "train_1913",
+    "train_1463"
+  ],
+  "fold_7": [
+    "train_1804",
+    "train_738",
+    "train_614",
+    "train_587",
+    "train_943",
+    "validate_664",
+    "train_951",
+    "validate_355",
+    "train_516",
+    "validate_58"
+  ],
+  "fold_8": [
+    "train_2410",
+    "train_2857",
+    "train_1719",
+    "train_2180",
+    "train_716",
+    "train_2000",
+    "train_1549",
+    "train_2719"
+  ],
+  "fold_9": [
+    "train_2395",
+    "validate_593",
+    "train_1542",
+    "validate_28",
+    "train_264",
+    "train_1625",
+    "validate_490",
+    "train_996",
+    "train_1470",
+    "validate_399",
+    "train_2518",
+    "train_658"
+  ],
+  "fold_10": [
+    "train_186",
+    "train_1434"
+  ]
+}
+🧹 Removed IDs so far: ['train_2325', 'train_1909', 'train_721', 'train_1463', 'train_1615', 'train_424', 'train_2341', 'validate_593', 'train_1776', 'train_1650', 'validate_530', 'train_1777', 'train_1483', 'train_1361', 'train_175', 'train_2118', 'train_2805', 'validate_688', 'validate_15', 'train_1964', 'validate_355', 'train_979', 'validate_249', 'train_614', 'train_2395', 'train_1913', 'train_2410', 'train_1681', 'train_942', 'train_2655', 'train_205', 'train_535', 'validate_606', 'train_1315', 'train_2528', 'train_2340', 'train_1436', 'train_1425', 'train_264', 'validate_424', 'train_1477', 'train_650', 'train_1157', 'train_2242', 'train_2857', 'train_527', 'train_2526', 'train_2925', 'train_1846', 'train_2588', 'train_1849', 'train_943', 'train_1549', 'train_2096', 'train_1980', 'train_1270', 'train_1804', 'train_1487', 'train_1134', 'train_1818', 'train_2180', 'train_738', 'train_2178', 'validate_58', 'train_1083', 'train_1978', 'train_1000', 'train_658', 'validate_656', 'validate_490', 'train_246', 'train_2289', 'train_516', 'train_1831', 'train_2115', 'train_654', 'train_686', 'train_1143', 'train_716', 'train_1330', 'train_2886', 'validate_385', 'train_1042', 'train_1656', 'train_305', 'train_951', 'train_2719', 'train_996', 'train_1105', 'train_2011', 'train_2527', 'train_1281', 'train_1434', 'train_186', 'train_1697', 'validate_477', 'train_1211', 'train_2518', 'validate_28', 'train_2000', 'train_2183', 'validate_484', 'train_2279', 'train_220', 'train_2131', 'train_1957', 'train_1435', 'train_1295', 'train_408', 'train_1097', 'train_1001', 'train_1470', 'train_111', 'train_700', 'train_1719', 'train_2321', 'train_1488', 'validate_399', 'train_1625', 'train_1738', 'train_1351', 'train_1866', 'validate_664', 'train_587', 'train_150', 'train_1660', 'train_2522', 'train_1532', 'train_2562', 'train_1542', 'train_1689', 'train_1366', 'validate_222', 'validate_8', 'train_866', 'train_328']
