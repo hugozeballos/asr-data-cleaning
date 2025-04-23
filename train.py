@@ -43,9 +43,6 @@ def train(cfg):
     """
     # Load config
     training_args = get_training_args(cfg)
-
-    # Load model and processor as specified in the config
-    model, processor = load_model(cfg)
     #train_dataset, val_dataset = load_datasets()
 
     # Generate dataset folds (10-fold cross-validation)
@@ -84,6 +81,8 @@ def train(cfg):
 
     # 🔄 Cross-validation loop (10 folds)
     for fold_idx in tqdm(range(10), desc="🔄 Cross-validation Progress"):
+        # Load model and processor as specified in the config
+        model, processor = load_model(cfg)
         print(f"\n📁 Fold {fold_idx+1}/10 - Using it as validation set")
 
         # Define train and validation indices
@@ -148,6 +147,8 @@ def train(cfg):
             pbar.update(1)
 
         mlflow.end_run()
+        del model
+        del processor
         torch.cuda.empty_cache()
 
         # Run validation + filtering based on CER

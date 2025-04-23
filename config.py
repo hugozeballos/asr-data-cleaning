@@ -25,7 +25,7 @@ def get_training_args(cfg):
         per_device_train_batch_size=cfg["batch_size"],
         gradient_accumulation_steps=cfg.get("gradient_accumulation_steps", 4),
         evaluation_strategy=cfg.get("evaluation_strategy", "steps"),
-        eval_steps=cfg.get("eval_steps", 20),
+        eval_steps=cfg.get("eval_steps", 5),
         logging_steps=cfg.get("logging_steps", 5),
         learning_rate=cfg["learning_rate"],
         num_train_epochs=cfg["epochs"],
