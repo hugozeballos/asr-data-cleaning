@@ -2,8 +2,8 @@
 #SBATCH --job-name=whisper_tiny_threshold_0.1
 #SBATCH --output=/mnt/ialabnas/homes/hugoz/asr-data-cleaning/experiments/whisper_tiny_threshold_0.1/logs/whisper_tiny_threshold_0.1_%j.log
 #SBATCH --error=/mnt/ialabnas/homes/hugoz/asr-data-cleaning/experiments/whisper_tiny_threshold_0.1/logs/whisper_tiny_threshold_0.1_%j.err
-#SBATCH --partition=ialab-eph
-#SBATCH --gres=gpu:2080_super:2
+#SBATCH --partition=ialab-high
+#SBATCH --gres=gpu:titan_rtx:2
 #SBATCH --mem=32G
 #SBATCH --time=1-00:00:00
 #SBATCH --ntasks=2

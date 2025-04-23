@@ -1,0 +1,24 @@
+🚀 Running experiment in: experiments/whisper_small_threshold_0.1
+🚀 Running experiment in: experiments/whisper_small_threshold_0.1
+📦 Loading model from: openai/whisper-small
+📦 Loading model from: openai/whisper-small
+🚀 FULL mode: Using entire dataset of 3663 examples.
+🚀 FULL mode: Using entire dataset of 3663 examples.
+🚀 No checkpoint found. Starting from fold 1
+
+📁 Fold 1/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+🚀 No checkpoint found. Starting from fold 1
+
+📁 Fold 1/10 - Using it as validation set
+⚙️ Preprocessing train_subset...
+⚙️ Preprocessing val_subset...⚙️ Preprocessing val_subset...
+
+📊 Train samples: 3294
+📊 Validation samples: 366
+📊 Train samples: 3294
+📊 Validation samples: 366
+
+🏋️ Training on Fold 1...
+
+🏋️ Training on Fold 1...

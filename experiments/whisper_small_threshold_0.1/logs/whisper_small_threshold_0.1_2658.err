@@ -1,0 +1,71 @@
+W0422 15:34:28.969000 140628019668032 torch/distributed/run.py:779] 
+W0422 15:34:28.969000 140628019668032 torch/distributed/run.py:779] *****************************************
+W0422 15:34:28.969000 140628019668032 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0422 15:34:28.969000 140628019668032 torch/distributed/run.py:779] *****************************************
+/home/hugoz/.local/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/home/hugoz/.local/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+[W422 15:34:36.276016435 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W422 15:34:36.278759962 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+Using the latest cached version of the dataset since HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at datasets_cache/HugoZeballos___original-audio-dataset-with-inferencesofwhysper-and-metrics/default/0.0.0/6814c420edb0d06914b504e4b67e8e5277d8cf40 (last modified on Tue Apr 22 13:49:52 2025).
+Using the latest cached version of the dataset since HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at datasets_cache/HugoZeballos___original-audio-dataset-with-inferencesofwhysper-and-metrics/default/0.0.0/6814c420edb0d06914b504e4b67e8e5277d8cf40 (last modified on Tue Apr 22 13:49:52 2025).
+🔄 Cross-validation Progress:   0%|          | 0/10 [00:00<?, ?it/s]🔄 Cross-validation Progress:   0%|          | 0/10 [00:00<?, ?it/s]You are adding a <class 'transformers.integrations.integration_utils.MLflowCallback'> to the callbacks of this Trainer, but there is already one. The currentlist of callbacks is
+:DefaultFlowCallback
+MLflowCallback
+EarlyStoppingCallback
+🔄 Cross-validation Progress:   0%|          | 0/10 [00:03<?, ?it/s]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/ialabnas/homes/hugoz/asr-data-cleaning/main.py", line 25, in <module>
+[rank1]:     train(cfg)
+[rank1]:   File "/mnt/ialabnas/homes/hugoz/asr-data-cleaning/train.py", line 141, in train
+[rank1]:     mlflow.set_experiment(cfg["mlflow_experiment"])
+[rank1]:   File "/home/hugoz/.local/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 164, in set_experiment
+[rank1]:     raise MlflowException(
+[rank1]: mlflow.exceptions.MlflowException: Cannot set a deleted experiment 'whisper_small_threshold_0.1' as the active experiment. You can restore the experiment, or permanently delete the experiment to create a new one.
+You are adding a <class 'transformers.integrations.integration_utils.MLflowCallback'> to the callbacks of this Trainer, but there is already one. The currentlist of callbacks is
+:DefaultFlowCallback
+MLflowCallback
+EarlyStoppingCallback
+🔄 Cross-validation Progress:   0%|          | 0/10 [00:03<?, ?it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/ialabnas/homes/hugoz/asr-data-cleaning/main.py", line 25, in <module>
+[rank0]:     train(cfg)
+[rank0]:   File "/mnt/ialabnas/homes/hugoz/asr-data-cleaning/train.py", line 141, in train
+[rank0]:     mlflow.set_experiment(cfg["mlflow_experiment"])
+[rank0]:   File "/home/hugoz/.local/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 164, in set_experiment
+[rank0]:     raise MlflowException(
+[rank0]: mlflow.exceptions.MlflowException: Cannot set a deleted experiment 'whisper_small_threshold_0.1' as the active experiment. You can restore the experiment, or permanently delete the experiment to create a new one.
+W0422 15:34:46.024000 140628019668032 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 1114901 closing signal SIGTERM
+E0422 15:34:46.189000 140628019668032 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 1 (pid: 1114902) of binary: /home/hugoz/storage/miniconda3/envs/whisper_env/bin/python
+Traceback (most recent call last):
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/hugoz/storage/miniconda3/envs/whisper_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+main.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-22_15:34:46
+  host      : hydra.ing.puc.cl
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1114902)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
