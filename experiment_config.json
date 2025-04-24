@@ -15,7 +15,7 @@
     "mlflow_experiment": "whisper_small_threshold_0.05",
     
   
-    "batch_size": 2,
+    "batch_size": 4,
     "epochs": 1,
     "learning_rate": 5e-5,
     
