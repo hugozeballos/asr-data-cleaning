@@ -3,16 +3,16 @@
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
-    "model_name": "openai/whisper-large-v3-turbo",
+    "model_name": "openai/whisper-small",
     
     "mode": "full", 
     
     "filtering_strategy": "threshold",
     "filtering_threshold": 0.1,
     
-    "output_dir": "experiments/whisper_large_threshold_0.1/checkpoints",
-    "json_output": "experiments/whisper_large_threshold_0.1/removed_whisper_large_threshold_01_ids.json",
-    "mlflow_experiment": "whisper_large_threshold_0.1",
+    "output_dir": "experiments/whisper_small_threshold_0.1/checkpoints",
+    "json_output": "experiments/whisper_small_threshold_0.1/removed_whisper_small_threshold_01_ids.json",
+    "mlflow_experiment": "whisper_small_threshold_0.1",
     
   
     "batch_size": 2,
