@@ -1,5 +1,5 @@
 {
-    "run_name": "whisper_tyni_threshold_0.3",
+    "run_name": "whisper_tyni_threshold_0.5",
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
@@ -8,11 +8,11 @@
     "mode": "full", 
     
     "filtering_strategy": "threshold",
-    "filtering_threshold": 0.3,
+    "filtering_threshold": 0.5,
     
-    "output_dir": "experiments/whisper_tiny_threshold_0.3/checkpoints",
-    "json_output": "experiments/whisper_tiny_threshold_0.3/removed_whisper_tiny_threshold_03_ids.json",
-    "mlflow_experiment": "whisper_tiny_threshold_0.3",
+    "output_dir": "experiments/whisper_tiny_threshold_0.5/checkpoints",
+    "json_output": "experiments/whisper_tiny_threshold_0.5/removed_whisper_tiny_threshold_05_ids.json",
+    "mlflow_experiment": "whisper_tiny_threshold_0.5",
     
   
     "batch_size": 8,
