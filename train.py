@@ -147,15 +147,16 @@ def train(cfg):
             pbar.update(1)
 
         mlflow.end_run()
-        del model
-        del processor
-        torch.cuda.empty_cache()
 
         # Run validation + filtering based on CER
         new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx, cfg)
 
         # Update the global set of removed IDs
         removed_ids.update(new_removed_ids)
+
+        del model
+        del processor
+        torch.cuda.empty_cache()
 
         # Delete checkpoints
         checkpoints_dir = cfg.get("output_dir", "./results")
