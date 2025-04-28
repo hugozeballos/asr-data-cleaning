@@ -168,11 +168,7 @@ def train(cfg):
                 trainer.train()
                 pbar.update(1)  # update once per epoch or adapt as you wish
             # optional custom logging — executed only by rank-0
-            if is_rank0():
-                mlflow.log_metric("train_samples", len(train_subset))
-                mlflow.log_metric("val_samples",   len(val_subset))
-        # `mlflow.end_run()` is called automatically for rank-0 when the context exits
-        
+            #    
         # Run validation + filtering based on CER
         new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx, cfg)
 

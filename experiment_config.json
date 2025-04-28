@@ -1,5 +1,5 @@
 {
-    "run_name": "CVClean_Wsmall_threshold_0.3",
+    "run_name": "CVClean_Wsmall_threshold_0.05",
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
@@ -8,11 +8,11 @@
     "mode": "full", 
     
     "filtering_strategy": "threshold",
-    "filtering_threshold": 0.3,
+    "filtering_threshold": 0.05,
     
-    "output_dir": "experiments/CVClean_Wsmall_threshold_0.3/checkpoints",
-    "json_output": "experiments/CVClean_Wsmall_threshold_0.3/removed_CVClean_Wsmall_threshold_03_ids.json",
-    "mlflow_experiment": "CVClean_Wsmall_threshold_0.3",
+    "output_dir": "experiments/CVClean_Wsmall_threshold_0.05/checkpoints",
+    "json_output": "experiments/CVClean_Wsmall_threshold_0.05/removed_CVClean_Wsmall_threshold_005_ids.json",
+    "mlflow_experiment": "CVClean_Wsmall_threshold_0.05",
     
     "batch_size": 8,
     "epochs": 1,
