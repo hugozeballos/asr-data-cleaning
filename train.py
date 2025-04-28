@@ -36,6 +36,16 @@ from utils import (
     validate_and_filter,
 )
 
+# --- is raank 0? for mlflow no repeat registerE ----------------------------------------------------------------
+import torch.distributed as dist
+from contextlib import nullcontext
+
+def is_rank0() -> bool:
+    """Devuelve True si no hay DDP o si el rank global es 0."""
+    return (not dist.is_available()
+            or not dist.is_initialized()
+            or dist.get_rank() == 0)
+
 def train(cfg):
     """
     Main training function. Performs cross-validation training with data filtering
@@ -123,6 +133,11 @@ def train(cfg):
         print(f"📊 Train samples: {len(train_subset)}")
         print(f"📊 Validation samples: {len(val_subset)}")
 
+        # ---------- callbacks dinámicos ----------
+        callbacks = [EarlyStoppingCallback(early_stopping_patience=3)]
+        if is_rank0():                       # solo rank 0 usa MLflowCallback
+            callbacks.append(MLflowCallback())
+
         # Initialize Hugging Face Trainer
         trainer = Seq2SeqTrainer(
             model=model,
@@ -132,22 +147,32 @@ def train(cfg):
             tokenizer=processor.feature_extractor,
             data_collator=data_collator,
             compute_metrics=lambda pred: compute_metrics(pred, processor),
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=3), MLflowCallback()]
+            callbacks=callbacks
         )
 
         print(f"\n🏋️ Training on Fold {fold_idx+1}...")
-        mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
-        mlflow.set_experiment(cfg["mlflow_experiment"])
-        mlflow.start_run(run_name=f"fold_{fold_idx+1}")
+        # ---------- MLflow handled only by rank-0 -----------------------------------
+        if is_rank0():
+            mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+            mlflow.set_experiment(cfg["mlflow_experiment"])
+            run_ctx = mlflow.start_run(run_name=f"fold_{fold_idx + 1}")   # returns a context manager
+        else:
+            from contextlib import nullcontext
+            run_ctx = nullcontext()                                       # no-op for non-zero ranks
+        # ---------------------------------------------------------------------------
 
-
-        # Run training and log progress with tqdm
-        with tqdm(total=training_args.num_train_epochs, desc=f"🏋️ Fold {fold_idx+1}") as pbar:
-            trainer.train()
-            pbar.update(1)
-
-        mlflow.end_run()
-
+        # Train (all ranks execute; only rank-0 logs to MLflow)
+        with run_ctx:
+            with tqdm(total=training_args.num_train_epochs,
+                    desc=f"🏋️ Fold {fold_idx + 1}") as pbar:
+                trainer.train()
+                pbar.update(1)  # update once per epoch or adapt as you wish
+            # optional custom logging — executed only by rank-0
+            if is_rank0():
+                mlflow.log_metric("train_samples", len(train_subset))
+                mlflow.log_metric("val_samples",   len(val_subset))
+        # `mlflow.end_run()` is called automatically for rank-0 when the context exits
+        
         # Run validation + filtering based on CER
         new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx, cfg)
 
