@@ -181,31 +181,29 @@ def train(cfg):
 
         # Delete checkpoints
         checkpoints_dir = cfg.get("output_dir", "./results")
-        if os.path.exists(checkpoints_dir):
-            # Sólo para el primer fold, hacemos un backup dos carpetas arriba
-            if fold_idx == 0:
-                # dos niveles por encima de checkpoints_dir
-                backup_parent = os.path.abspath(
-                    os.path.join(checkpoints_dir, os.pardir, os.pardir)
-                )
-                # nombramos la carpeta de backup (puedes cambiar el sufijo)
-                backup_dir = os.path.join(
-                    backup_parent,
-                    f"{os.path.basename(checkpoints_dir)}_fold{fold_idx+1}_backup"
-                )
-                print(f"📦 Haciendo backup de checkpoints en {backup_dir} …")
-                shutil.copytree(checkpoints_dir, backup_dir)
-            
-            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}…")
-            shutil.rmtree(checkpoints_dir, ignore_errors=True)
-        
-        print("🧹 Removed IDs so far:", list(removed_ids))
 #        if os.path.exists(checkpoints_dir):
-#            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}...")
+#            # Sólo para el primer fold, hacemos un backup dos carpetas arriba
+#            if fold_idx == 0:
+#                # dos niveles por encima de checkpoints_dir
+#                backup_parent = os.path.abspath(
+#                    os.path.join(checkpoints_dir, os.pardir, os.pardir)
+#                )
+#                # nombramos la carpeta de backup (puedes cambiar el sufijo)
+#                backup_dir = os.path.join(
+#                    backup_parent,
+#                    f"{os.path.basename(checkpoints_dir)}_fold{fold_idx+1}_backup"
+#                )
+#                print(f"📦 Haciendo backup de checkpoints en {backup_dir} …")
+#                shutil.copytree(checkpoints_dir, backup_dir)
+#            
+#            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}…")
 #            shutil.rmtree(checkpoints_dir, ignore_errors=True)
-#
+        
 #        print("🧹 Removed IDs so far:", list(removed_ids))
+        if os.path.exists(checkpoints_dir):
+            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}...")
+            shutil.rmtree(checkpoints_dir, ignore_errors=True)
 
-
+        print("🧹 Removed IDs so far:", list(removed_ids))
 if __name__ == "__main__":
     train()
