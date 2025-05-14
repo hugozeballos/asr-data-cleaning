@@ -21,7 +21,7 @@
     "learning_rate": 5e-5,
     
     "gpus": 1,
-    "gpu_type": "titan_rtx",
+    "gpu_type": "2080_ti",
     "partition": "ialab-high",
     "ntasks": 1,
     "cpus_per_task": 4
