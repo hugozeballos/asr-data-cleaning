@@ -8,7 +8,7 @@
     "cer_records_file": "experiments/CVClean_Wtiny_threshold_0.5/cer_records.json",
     "cer_complete_suffix": "_complete",
     
-    "mode": "full",
+    "mode": "debug",
     "filtering_strategy": "threshold",
     "filtering_threshold": 0.5,
     
