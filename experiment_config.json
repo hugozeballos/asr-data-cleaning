@@ -1,28 +1,28 @@
 {
-    "run_name": "CVClean_Wtiny",
+    "run_name": "CVClean_Wsmall",
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
     "model_name": "openai/whisper-small",
 
-    "cer_records_file": "experiments/CVClean_Wtiny/cer_records.json",
+    "cer_records_file": "experiments/CVClean_Wsmall/cer_records.json",
     "cer_complete_suffix": "_complete",
     
     "mode": "full",
     "filtering_strategy": "threshold",
     "filtering_threshold": 0.1,
     
-    "output_dir": "experiments/CVClean_Wtiny/checkpoints",
-    "json_output": "experiments/CVClean_Wtiny/removed_CVClean_Wtiny_threshold_01_ids.json",
-    "mlflow_experiment": "CVClean_Wtiny",
+    "output_dir": "experiments/CVClean_Wsmall/checkpoints",
+    "json_output": "experiments/CVClean_Wsmall/removed_CVClean_Wsmall_threshold_01_ids.json",
+    "mlflow_experiment": "CVClean_Wsmall",
     
     "batch_size": 8,
     "epochs": 1,
     "learning_rate": 5e-5,
     
     "gpus": 1,
-    "gpu_type": "titan_rtx",
-    "partition": "ialab-high",
+    "gpu_type": "2080_super",
+    "partition": "ialab-eph",
     "ntasks": 1,
     "cpus_per_task": 4
   }
