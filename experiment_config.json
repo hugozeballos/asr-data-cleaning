@@ -1,20 +1,20 @@
 {
-    "run_name": "CVClean_Wtiny_threshold_0.1",
+    "run_name": "CVClean_Wtiny",
     
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
     "model_name": "openai/whisper-tiny",
 
-    "cer_records_file": "experiments/CVClean_Wtiny_threshold_0.1/cer_records.json",
+    "cer_records_file": "experiments/CVClean_Wtiny/cer_records.json",
     "cer_complete_suffix": "_complete",
     
-    "mode": "debug",
+    "mode": "full",
     "filtering_strategy": "threshold",
     "filtering_threshold": 0.1,
     
-    "output_dir": "experiments/CVClean_Wtiny_threshold_0.1/checkpoints",
-    "json_output": "experiments/CVClean_Wtiny_threshold_0.1/removed_CVClean_Wtiny_threshold_01_ids.json",
-    "mlflow_experiment": "CVClean_Wtiny_threshold_0.1",
+    "output_dir": "experiments/CVClean_Wtiny/checkpoints",
+    "json_output": "experiments/CVClean_Wtiny/removed_CVClean_Wtiny_threshold_01_ids.json",
+    "mlflow_experiment": "CVClean_Wtiny",
     
     "batch_size": 8,
     "epochs": 1,
