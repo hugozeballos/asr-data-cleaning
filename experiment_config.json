@@ -4,6 +4,9 @@
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
     
     "model_name": "openai/whisper-tiny",
+
+    "cer_records_file": "experiments/CVClean_Wtiny_threshold_0.5/cer_records.json",
+    "cer_complete_suffix": "_complete",
     
     "mode": "full",
     "filtering_strategy": "threshold",

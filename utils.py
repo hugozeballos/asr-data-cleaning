@@ -202,34 +202,34 @@ def infer_batch(batch, processor, model):
     hypotheses = processor.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
 
     return {"hypothesis": hypotheses}
-    # 3. Filtrar ejemplos con CER > 0.3
-    ##threshold_value = 0.3
-    ##removed_ids = [example["id"] for example in val_subset if example["cer"] > threshold_value]
-    ##print(f"📉 Umbral CER fijo: {threshold_value:.2f} | 🚫 Eliminando {len(removed_ids)} ejemplos.")
 
-    # 4. Guardar detalles de los ejemplos eliminados (referencia, hipótesis, cer)
-    ##removed_examples = [
-    ##    {
-    ##        "id": example["id"],
-    ##        "cer": example["cer"],
-    ##        "reference": example.get("reference", ""),
-    ##        "hypothesis": example.get("hypothesis", "")
-    ##    }
-    ##    for example in val_subset
-    ##    if example["cer"] > threshold_value
-    ##]
 
-    # 5. Guardar todos los ejemplos eliminados de todos los folds en un solo archivo
-    ##removed_examples_file = "removed_examples_all_folds.json"
-    ##try:
-    ##    with open(removed_examples_file, "r") as f:
-    ##        removed_examples_all_folds = json.load(f)
-    ##except FileNotFoundError:
-    ##    removed_examples_all_folds = {}
+def compute_cer_per_fold(model, processor, val_subset, fold_idx):
+    """
+    Ejecuta inferencia y calcula CER para cada muestra en val_subset.
+    Devuelve lista de dicts: {"sample_id","fold","cer"}.
+    """
+    # 1) Inferencia batch a batch
+    val_subset = val_subset.map(
+        lambda batch: infer_batch(batch, processor, model),
+        batched=True, batch_size=16, num_proc=1,
+        desc="🔍 Inferencia de hipótesis"
+    )
 
-    ##removed_examples_all_folds[f"fold_{fold_idx+1}"] = removed_examples
+    # 2) Calcular CER usando tu función existente
+    val_subset = val_subset.map(
+        compute_cer_sample,
+        num_proc=1,
+        desc="✂️ Cálculo de CER"
+    )
 
-    ##with open(removed_examples_file, "w") as f:
-    ##    json.dump(removed_examples_all_folds, f, indent=2)
+    # 3) Empaquetar resultados en una lista de diccionarios
+    cer_list = [
+        {"sample_id": ex["id"], "fold": fold_idx, "cer": ex["cer"]}
+        for ex in val_subset
+    ]
+
+    # 4) Devolver la lista de métricas CER
+    return cer_list
 
 

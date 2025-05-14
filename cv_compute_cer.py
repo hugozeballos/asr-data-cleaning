@@ -33,7 +33,7 @@ from transformers import Seq2SeqTrainer, EarlyStoppingCallback
 
 from utils import (
     compute_metrics,
-    compute_cer_per_fold
+    validate_and_filter,
 )
 
 # --- is raank 0? for mlflow no repeat registerE ----------------------------------------------------------------
@@ -58,30 +58,39 @@ def train(cfg):
     # Generate dataset folds (10-fold cross-validation)
     full_dataset, folds = prepare_dataset_for_cross_validation(cfg)
 
-    # 1) Inicializar checkpoint de CER
-    cer_file       = cfg["cer_records_file"]
-    complete_sufx  = cfg["cer_complete_suffix"]
-    cer_file_done  = cer_file.replace(".json", f"{complete_sufx}.json")
-    cer_records    = []
-    # Si ya existe el archivo final, salimos
-    if os.path.exists(cer_file_done):
-        print(f"✅ Experimento finalizado: {cer_file_done}")
-        return
+    removed_ids = set()
+    checkpoint_file = cfg["json_output"]
 
-    # Si hay un checkpoint parcial, lo cargamos y determinamos desde qué fold arrancar
-    if os.path.exists(cer_file):
-        with open(cer_file) as f:
-            cer_records = json.load(f)
-        processed = {r["fold"] for r in cer_records}
-        start_fold = max(processed) + 1 if processed else 0
-        print(f"🔄 Reanudando desde fold {start_fold+1}")
+    # Load existing checkpoint to continue from a previous run
+    if os.path.exists(checkpoint_file):
+        with open(checkpoint_file, "r") as f:
+            checkpoint = json.load(f)
+        for key in checkpoint.keys():
+            removed_ids.update(checkpoint[key])
+
+    # Determine the starting fold based on completed checkpoints
+    if os.path.exists(checkpoint_file):
+        with open(checkpoint_file, "r") as f:
+            checkpoint = json.load(f)
+        completed_folds = [
+            int(key.split("_")[1])
+            for key in checkpoint.keys()
+            if key.startswith("fold")
+        ]
+        if completed_folds:
+            start_fold = max(completed_folds)
+            print(f"🔁 Resuming from fold {start_fold + 1}")
+        else:
+            start_fold = 0
     else:
         start_fold = 0
-        print("🚀 Comenzando desde fold 1")
+        checkpoint = {}
+        print("🚀 No checkpoint found. Starting from fold 1")
+
     
 
     # 🔄 Cross-validation loop (10 folds)
-    for fold_idx in tqdm(range(start_fold, 10), desc="🔄 Cross-validation Progress"):
+    for fold_idx in tqdm(range(10), desc="🔄 Cross-validation Progress"):
         # Load model and processor as specified in the config
         model, processor = load_model(cfg)
         print(f"\n📁 Fold {fold_idx+1}/10 - Using it as validation set")
@@ -114,6 +123,23 @@ def train(cfg):
             num_proc=1,
             desc="Preprocessing Val"
         )
+
+            # — Sólo si dynamic_filtering está activado —  
+        if dynamic:
+            print("🔍 Applying dynamic filtering on removed_ids...")
+            train_subset = train_subset.filter(
+                lambda x: x["id"] not in removed_ids,
+                num_proc=1
+            )
+        # (Opcional) si también quieres filtrar la validación:
+        val_subset = val_subset.filter(
+            lambda x: x["id"] not in removed_ids,
+            num_proc=1
+        )
+
+        # Remove previously filtered samples
+        train_subset = train_subset.filter(lambda x: x["id"] not in removed_ids, num_proc=1)
+        val_subset = val_subset.filter(lambda x: x["id"] not in removed_ids, num_proc=1)
 
         torch.cuda.empty_cache()
 
@@ -155,14 +181,12 @@ def train(cfg):
                 trainer.train()
                 pbar.update(1)  # update once per epoch or adapt as you wish
             # optional custom logging — executed only by rank-0
+            #    
+        # Run validation + filtering based on CER
+        new_removed_ids = validate_and_filter(model, processor, val_subset, fold_idx, cfg)
 
-        # 3) Calcular CER para este fold y hacer checkpoint
-        cer_list = compute_cer_per_fold(model, processor, val_subset, fold_idx)
-        cer_records.extend(cer_list)
-        # Guardar checkpoint parcial inmediatamente
-        with open(cer_file, "w") as f:
-            json.dump(cer_records, f, indent=2)
-        print(f"💾 Fold {fold_idx+1} completo — {len(cer_list)} CERs guardados.")
+        # Update the global set of removed IDs
+        removed_ids.update(new_removed_ids)
 
         del model
         del processor
@@ -170,12 +194,29 @@ def train(cfg):
 
         # Delete checkpoints
         checkpoints_dir = cfg.get("output_dir", "./results")
+#        if os.path.exists(checkpoints_dir):
+#            # Sólo para el primer fold, hacemos un backup dos carpetas arriba
+#            if fold_idx == 0:
+#                # dos niveles por encima de checkpoints_dir
+#                backup_parent = os.path.abspath(
+#                    os.path.join(checkpoints_dir, os.pardir, os.pardir)
+#                )
+#                # nombramos la carpeta de backup (puedes cambiar el sufijo)
+#                backup_dir = os.path.join(
+#                    backup_parent,
+#                    f"{os.path.basename(checkpoints_dir)}_fold{fold_idx+1}_backup"
+#                )
+#                print(f"📦 Haciendo backup de checkpoints en {backup_dir} …")
+#                shutil.copytree(checkpoints_dir, backup_dir)
+#            
+#            print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}…")
+#            shutil.rmtree(checkpoints_dir, ignore_errors=True)
+        
+#        print("🧹 Removed IDs so far:", list(removed_ids))
         if os.path.exists(checkpoints_dir):
             print(f"🧹 Removing checkpoint directory after fold {fold_idx+1}...")
             shutil.rmtree(checkpoints_dir, ignore_errors=True)
 
-        print("🧹 Removed IDs so far:", list(cer_records))
-    os.rename(cer_file, cer_file_done)
-    print(f"\n✅ Cross-validation terminado. Archivo final: {cer_file_done}")
+        print("🧹 Removed IDs so far:", list(removed_ids))
 if __name__ == "__main__":
     train()
