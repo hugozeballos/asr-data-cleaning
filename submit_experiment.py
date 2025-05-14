@@ -67,7 +67,7 @@ torchrun \\
   --nnodes=1 \\
   --nproc_per_node={gpus} \\
   --rdzv_backend=static \\
-  --rdzv_endpoint=localhost:12343 \\
+  --rdzv_endpoint=localhost:12344 \\
   main.py --config_path={copied_config_path}
 
 # Post-run cleanup
