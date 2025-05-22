@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--config_path", type=str, required=True, help="Path to comparacion_config.json")
 args = parser.parse_args()
 
+
 # 2️⃣ Load configuration
 with open(args.config_path) as f:
     cfg = json.load(f)

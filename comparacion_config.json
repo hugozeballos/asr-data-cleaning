@@ -20,7 +20,7 @@
     "remove_unused_columns": true,
   
     "dataset_path": "/ruta/al/dataset_guardado",
-    "mlflow_uri": "http://mlflow-server:5000",
+    "mlflow_uri": "https://mlflow-server-muiutdydxq-uc.a.run.app/#/",
     "cer_records_path": "comparacion/tiny/cer_records_complete.json",
   
     "gpus": 2,

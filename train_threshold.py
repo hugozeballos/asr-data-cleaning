@@ -107,11 +107,11 @@ for thr in thresholds:
         eval_dir = os.path.join("comparacion", model_name, f"threshold_{thr}")
         os.makedirs(eval_dir, exist_ok=True)
 
+        with open(os.path.join(eval_dir, "eval_por_muestra.json"), "w") as f:
+            json.dump(cer_list, f, indent=2)
+
         with open(os.path.join(eval_dir, "eval_global.json"), "w") as f:
             json.dump({"threshold": thr, "cer_global": cer_global}, f, indent=2)
-
-        with open(os.path.join(eval_dir, "eval_por_muestra.json"), "w") as f:
-            json.dump(cer_scores, f, indent=2)
 
         mlflow.log_metric("cer_global", cer_global)
 
@@ -128,6 +128,7 @@ plt.title(f"CER global vs Threshold ({model_name})")
 scatter_path = os.path.join("comparacion", model_name, "scatter.png")
 plt.savefig(scatter_path)
 mlflow.log_artifact(scatter_path)
+
 
 # Boxplot
 plt.figure()
