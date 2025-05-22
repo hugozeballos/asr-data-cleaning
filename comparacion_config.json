@@ -30,10 +30,10 @@
 
   
     "gpus": 2,
-    "gpu_type": "titan_rtx",
+    "gpu_type": "1080_ti",
     "partition": "ialab-high",
     "ntasks": 2,
-    "cpus_per_task": 4,
+    "cpus_per_task": 2,
     "memory": "32G",
     "time": "24:00:00"
   }  
