@@ -52,7 +52,7 @@ with open(job_script, "w") as f:
 #SBATCH --ntasks={ntasks}
 #SBATCH --cpus-per-task={cpus_per_task}
 
-cd {root_dir}
+cd ~/storage/asr-data-cleaning
 
 source ~/.bashrc
 conda activate whisper_env
