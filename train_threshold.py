@@ -11,8 +11,8 @@ from datasets import load_from_disk, DatasetDict
 from jiwer import cer
 
 from config import get_training_args
-from model import load_model_and_processor
-from utils import prepare_dataset, minimal_transform
+from model import load_model
+from utils import prepare_dataset
 from dataset import get_dataset_dict
 from transformers import Seq2SeqTrainer, set_seed
 from utils import compute_cer_per_fold, compute_metrics
@@ -68,7 +68,7 @@ for thr in thresholds:
         train_ds = shuffled.select(range(n_val, len(shuffled)))
 
         # 6.3 Preprocesamiento
-        model, processor = load_model_and_processor(cfg)
+        model, processor = load_model(cfg)
 
         train_ds = train_ds.map(lambda x: prepare_dataset(x, processor),
                                 remove_columns=["audio_bytes"], num_proc=1)
