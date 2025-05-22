@@ -157,7 +157,7 @@ def train(cfg):
             # optional custom logging — executed only by rank-0
 
         # 3) Calcular CER para este fold y hacer checkpoint
-        cer_list = compute_cer_per_fold(model, processor, val_subset, fold_idx)
+            cer_list = compute_cer_per_fold(model, processor, val_subset, fold_idx)
         cer_records.extend(cer_list)
         # Guardar checkpoint parcial inmediatamente
         with open(cer_file, "w") as f:

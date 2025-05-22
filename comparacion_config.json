@@ -1,0 +1,33 @@
+{
+    "model_name": "tiny",
+    "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5],
+    "test_percent": 0.05,
+  
+    "batch_size": 8,
+    "eval_batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 5e-5,
+    "epochs": 3,
+  
+    "fp16": true,
+    "gradient_checkpointing": true,
+  
+    "output_dir": "results/tmp",
+    "logging_steps": 10,
+    "save_strategy": "epoch",
+    "evaluation_strategy": "epoch",
+    "save_total_limit": 2,
+    "remove_unused_columns": true,
+  
+    "dataset_path": "/ruta/al/dataset_guardado",
+    "mlflow_uri": "http://mlflow-server:5000",
+    "cer_records_path": "comparacion/tiny/cer_records_complete.json",
+  
+    "gpus": 2,
+    "gpu_type": "titan_rtx",
+    "partition": "ialab-high",
+    "ntasks": 2,
+    "cpus_per_task": 4,
+    "memory": "32G",
+    "time": "24:00:00"
+  }  
