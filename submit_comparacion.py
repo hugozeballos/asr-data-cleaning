@@ -31,7 +31,7 @@ root_dir = os.getcwd()
 exp_dir = os.path.join(root_dir, "comparacion", model_name)
 logs_dir = os.path.join(exp_dir, "logs")
 job_script = os.path.join(exp_dir, "job.sh")
-copied_config_path = os.path.join(exp_dir, "experiment_config.json")
+copied_config_path = os.path.join(exp_dir, "comparacion_config.json")
 
 # 5️⃣ Create experiment/logs directories
 os.makedirs(logs_dir, exist_ok=True)
