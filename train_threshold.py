@@ -2,18 +2,13 @@ import os
 import json
 import random
 import numpy as np
-import torch
 import evaluate
 import mlflow
 import matplotlib.pyplot as plt
 
-from datasets import load_from_disk, DatasetDict
-from jiwer import cer
-
 from config import get_training_args
 from model import load_model
-from utils import prepare_dataset
-from dataset import get_dataset_dict
+from dataset import prepare_dataset_for_cross_validation
 from transformers import Seq2SeqTrainer, set_seed
 from utils import compute_cer_per_fold, compute_metrics
 
@@ -38,7 +33,7 @@ test_ids = {x["sample_id"] for x in cer_sorted[:test_n]}
 cer_map = {x["sample_id"]: x["cer"] for x in cer_data}
 
 # 3. Cargar dataset completo
-full_ds: DatasetDict = get_dataset_dict(cfg)
+full_ds, _ = prepare_dataset_for_cross_validation(cfg)
 
 # 4. Inicializar MLflow
 mlflow.set_tracking_uri(cfg["mlflow_uri"])
@@ -132,7 +127,7 @@ mlflow.log_artifact(scatter_path)
 
 # Boxplot
 plt.figure()
-data = [cer_sample_scores[t] for t in ths]
+data = [[s["cer"] for s in cer_sample_scores[t]] for t in ths]
 plt.boxplot(data, labels=[str(t) for t in ths])
 plt.xlabel("Threshold")
 plt.ylabel("CER por muestra")
