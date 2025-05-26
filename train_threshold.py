@@ -36,7 +36,7 @@ cer_map = {x["sample_id"]: x["cer"] for x in cer_data}
 full_ds, _ = prepare_dataset_for_cross_validation(cfg)
 
 # 4. Inicializar MLflow
-mlflow.set_tracking_uri(cfg["mlflow_uri"])
+mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
 mlflow.set_experiment("whisper_cer_threshold_exploration")
 
 # 5. Métricas acumuladas
