@@ -11,6 +11,8 @@ from model import load_model
 from dataset import prepare_dataset_for_cross_validation
 from transformers import Seq2SeqTrainer, set_seed
 from utils import compute_cer_per_fold, compute_metrics
+import torch.distributed as dist
+
 
 # 1. Cargar configuración
 with open("comparacion_config.json") as f:
@@ -35,9 +37,6 @@ cer_map = {x["sample_id"]: x["cer"] for x in cer_data}
 # 3. Cargar dataset completo
 full_ds, _ = prepare_dataset_for_cross_validation(cfg)
 
-# 4. Inicializar MLflow
-mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
-mlflow.set_experiment("whisper_cer_threshold_exploration")
 
 # 5. Métricas acumuladas
 cer_global_scores = []
@@ -79,6 +78,13 @@ for thr in thresholds:
             eval_dataset=val_ds,
             tokenizer=processor,
         )
+        # 4. Inicializar MLflow
+        mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+
+        is_main_process = not dist.is_available() or not dist.is_initialized() or dist.get_rank() == 0
+        if is_main_process:
+            mlflow.set_experiment("whisper_cer_threshold_exploration")
+
         trainer.train()
 
         # 6.5 Evaluación
