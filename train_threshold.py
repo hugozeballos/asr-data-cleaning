@@ -52,7 +52,7 @@ for thr in thresholds:
             sid = ex["id"]
             return sid not in test_ids and cer_map.get(sid, 1.0) <= thr
 
-        filtered = full_ds["train"].filter(keep_fn)
+        filtered = full_ds.filter(keep_fn)
 
         # 6.2 Split reproducible
         seed = 42
@@ -88,7 +88,7 @@ for thr in thresholds:
         trainer.train()
 
         # 6.5 Evaluación
-        test_ds = full_ds["train"].filter(lambda ex: ex["id"] in test_ids)
+        test_ds = full_ds.filter(lambda ex: ex["id"] in test_ids)
         test_ds = test_ds.map(lambda x: prepare_dataset(x, processor),
                               remove_columns=["audio_bytes"], num_proc=1)
         
