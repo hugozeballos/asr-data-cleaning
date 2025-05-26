@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from config import get_training_args
 from model import load_model
-from dataset import prepare_dataset_for_cross_validation
+from dataset import prepare_dataset, prepare_dataset_for_cross_validation
 from transformers import Seq2SeqTrainer, set_seed
 from utils import compute_cer_per_fold, compute_metrics
 import torch.distributed as dist
