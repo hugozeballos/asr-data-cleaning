@@ -33,7 +33,7 @@ def get_training_args(cfg):
         fp16=cfg.get("fp16", True),
         generation_max_length=cfg.get("generation_max_length", 225),
         report_to=cfg.get("report_to", "mlflow"),
-        load_best_model_at_end=True,
+        load_best_model_at_end=False,
         metric_for_best_model="wer",
         greater_is_better=False,
         dataloader_num_workers=cfg.get("dataloader_num_workers", 4),
