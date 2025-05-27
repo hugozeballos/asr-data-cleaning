@@ -32,6 +32,7 @@ def get_training_args(cfg):
         num_train_epochs=cfg["epochs"],
         predict_with_generate=True,
         fp16=cfg.get("fp16", True),
+        remove_unused_columns=False,
         generation_max_length=cfg.get("generation_max_length", 225),
         report_to=cfg.get("report_to", "mlflow"),
         load_best_model_at_end=True,
