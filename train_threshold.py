@@ -8,10 +8,17 @@ import matplotlib.pyplot as plt
 
 from config import get_training_args
 from model import load_model
-from dataset import prepare_dataset, prepare_dataset_for_cross_validation
+from dataset import (
+    load_datasets,
+    prepare_dataset,
+    prepare_dataset_for_cross_validation,
+    DataCollatorSpeechSeq2SeqWithPadding,
+)
 from transformers import Seq2SeqTrainer, set_seed
 from utils import compute_cer_per_fold, compute_metrics
 import torch.distributed as dist
+from transformers.integrations import MLflowCallback
+from transformers import Seq2SeqTrainer, EarlyStoppingCallback
 
 
 # 1. Cargar configuración
@@ -37,6 +44,11 @@ cer_map = {x["sample_id"]: x["cer"] for x in cer_data}
 # 3. Cargar dataset completo
 full_ds, _ = prepare_dataset_for_cross_validation(cfg)
 
+def is_rank0() -> bool:
+    """Devuelve True si no hay DDP o si el rank global es 0."""
+    return (not dist.is_available()
+            or not dist.is_initialized()
+            or dist.get_rank() == 0)
 
 # 5. Métricas acumuladas
 cer_global_scores = []
@@ -71,12 +83,24 @@ for thr in thresholds:
 
         # 6.4 Entrenamiento distribuido
         training_args = get_training_args(cfg)
+        data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
+        print("⚙️ Preprocessing train_subset...")
+
+                # ---------- callbacks dinámicos ----------
+        callbacks = [EarlyStoppingCallback(early_stopping_patience=3)]
+        if is_rank0():                       # solo rank 0 usa MLflowCallback
+            callbacks.append(MLflowCallback())
+
+        
         trainer = Seq2SeqTrainer(
             model=model,
             args=training_args,
             train_dataset=train_ds,
             eval_dataset=val_ds,
-            tokenizer=processor,
+            tokenizer=processor.feature_extractor,
+            data_collator=data_collator,
+            compute_metrics=lambda pred: compute_metrics(pred, processor),
+            callbacks=callbacks
         )
         # 4. Inicializar MLflow
         mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
