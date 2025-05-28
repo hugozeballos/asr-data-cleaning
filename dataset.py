@@ -107,7 +107,7 @@ def prepare_dataset_for_cross_validation(cfg):
     full_dataset = concatenate_datasets([dataset["train"], dataset["validation"]])
 
     if mode == "debug":
-        sample_size = min(20, len(full_dataset))
+        sample_size = min(50, len(full_dataset))
         full_dataset = full_dataset.select(range(sample_size))
         print(f"🧪 DEBUG mode: Using a sample of {sample_size} examples.")
     else:
