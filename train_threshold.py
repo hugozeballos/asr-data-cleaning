@@ -55,11 +55,17 @@ cer_global_scores = []
 cer_sample_scores = {}
 
 # 6. Iterar por threshold
+# 🔁 Por cada threshold...
 for thr in thresholds:
     run_name = f"{model_name}_threshold_{thr}"
+
+    # ✅ Establecer URI y experimento ANTES de iniciar la run
+    mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+    mlflow.set_experiment("whisper_cer_threshold_exploration")
+
     with mlflow.start_run(run_name=run_name):
 
-        # 6.1 Filtrar dataset excluyendo test y > threshold
+        # 6.1 Filtrar dataset
         def keep_fn(ex):
             sid = ex["id"]
             return sid not in test_ids and cer_map.get(sid, 1.0) <= thr
@@ -70,8 +76,13 @@ for thr in thresholds:
         seed = 42
         shuffled = filtered.shuffle(seed=seed)
         n_val = int(0.1 * len(shuffled))
+        if n_val == 0:
+            raise ValueError("❌ Eval dataset quedó vacío. Reduce el threshold o revisa el filtrado.")
+
         val_ds = shuffled.select(range(n_val))
         train_ds = shuffled.select(range(n_val, len(shuffled)))
+        print("✅ Train size:", len(train_ds))
+        print("✅ Val size:", len(val_ds))
 
         # 6.3 Preprocesamiento
         model, processor = load_model(cfg)
@@ -84,14 +95,13 @@ for thr in thresholds:
         # 6.4 Entrenamiento distribuido
         training_args = get_training_args(cfg)
         data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
-        print("⚙️ Preprocessing train_subset...")
 
-                # ---------- callbacks dinámicos ----------
+        # Callbacks
         callbacks = [EarlyStoppingCallback(early_stopping_patience=3)]
-        if is_rank0():                       # solo rank 0 usa MLflowCallback
-            callbacks.append(MLflowCallback())
+        if is_rank0():
+            callbacks.append(MLflowCallback())  # solo si no se agrega automáticamente
 
-        
+        # Entrenador
         trainer = Seq2SeqTrainer(
             model=model,
             args=training_args,
@@ -102,13 +112,8 @@ for thr in thresholds:
             compute_metrics=lambda pred: compute_metrics(pred, processor),
             callbacks=callbacks
         )
-        # 4. Inicializar MLflow
-        mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
 
-        is_main_process = not dist.is_available() or not dist.is_initialized() or dist.get_rank() == 0
-        if is_main_process:
-            mlflow.set_experiment("whisper_cer_threshold_exploration")
-
+        # Entrenar
         trainer.train()
 
         # 6.5 Evaluación
