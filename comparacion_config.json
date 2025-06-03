@@ -29,7 +29,7 @@
 
   
     "gpus": 2,
-    "gpu_type": "1080_ti",
+    "gpu_type": "2080_ti",
     "partition": "ialab-high",
     "ntasks": 2,
     "cpus_per_task": 2,
