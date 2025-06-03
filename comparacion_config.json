@@ -1,13 +1,13 @@
 {
-    "model_name": "openai/whisper-tiny",
-    "thresholds": [0.1, 0.3, 0.5, 1, 2, 5, 10],
+    "model_name": "openai/whisper-large-v3-turbo",
+    "thresholds": [0.05, 0.1, 0.5, 1, 2, 5, 10],
     "test_percent": 0.05,
 
     "run_name": "Comparation_therehold_cleaning_small",
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
-    "batch_size": 8,
+    "batch_size": 1,
     "eval_batch_size": 4,
     "gradient_accumulation_steps": 2,
     "learning_rate": 5e-5,
@@ -29,10 +29,10 @@
 
   
     "gpus": 2,
-    "gpu_type": "2080_ti",
+    "gpu_type": "titan_rtx",
     "partition": "ialab-high",
     "ntasks": 2,
     "cpus_per_task": 2,
     "memory": "32G",
-    "time": "24:00:00"
+    "time": "3-24:00:00"
   }  
