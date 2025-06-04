@@ -8,7 +8,7 @@
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
-    "batch_size": 8,
+    "batch_size": 32,
     "eval_batch_size": 4,
     "gradient_accumulation_steps": 2,
     "learning_rate": 5e-5,
@@ -30,7 +30,7 @@
 
   
     "gpus": 2,
-    "gpu_type": "2080_ti",
+    "gpu_type": "titan_rtx",
     "partition": "ialab-high",
     "ntasks": 2,
     "cpus_per_task": 2,
