@@ -1,14 +1,14 @@
 {
     "model_name": "openai/whisper-tiny",
-    "model_filter_name": "tiny",
+    "model_filter_name": "small",
     "thresholds": [0.1, 0.3, 0.5, 1, 2, 5, 10],
     "test_percent": 0.05,
 
-    "run_name": "Comparation_therehold_cleaning_tiny",
+    "run_name": "Comparation_therehold_cleaning_small",
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
-    "batch_size": 16,
+    "batch_size": 8,
     "eval_batch_size": 4,
     "gradient_accumulation_steps": 2,
     "learning_rate": 5e-5,
@@ -25,12 +25,12 @@
     "remove_unused_columns": true,
   
     "mlflow_uri": "https://mlflow-server-muiutdydxq-uc.a.run.app/#/",
-    "cer_records_path": "/home/hugoz/storage/asr-data-cleaning/experiments/CVClean_Wtiny/cer_records_complete.json",
+    "cer_records_path": "/home/hugoz/storage/asr-data-cleaning/experiments/CVClean_Wsmall/cer_records_complete.json",
     "mode": "full",
 
   
-    "gpus": 1,
-    "gpu_type": "titan_rtx",
+    "gpus": 2,
+    "gpu_type": "1080_ti",
     "partition": "ialab-high",
     "ntasks": 2,
     "cpus_per_task": 2,
