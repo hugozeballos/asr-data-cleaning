@@ -29,7 +29,7 @@
     "mode": "full",
 
   
-    "gpus": 2,
+    "gpus": 1,
     "gpu_type": "titan_rtx",
     "partition": "ialab-high",
     "ntasks": 2,
