@@ -18,17 +18,18 @@ with open(args.config_path) as f:
 
 # 3️⃣ Read important fields
 model_name = cfg["model_name"]
+run_name = cfg["run_name"]
 gpus = cfg["gpus"]
 gpu_type = cfg["gpu_type"]
 partition = cfg["partition"]
 ntasks = cfg["ntasks"]
 cpus_per_task = cfg["cpus_per_task"]
 memory = cfg.get("memory", "32G")
-run_name = f"cmp_{model_name}"
+model_filter_name = cfg["model_filter_name"]
 
 # 4️⃣ Define paths
 root_dir = os.getcwd()
-exp_dir = os.path.join(root_dir, "comparacion", model_name)
+exp_dir = os.path.join(root_dir, "comparacion", model_name, model_filter_name)
 logs_dir = os.path.join(exp_dir, "logs")
 job_script = os.path.join(exp_dir, "job.sh")
 copied_config_path = os.path.join(exp_dir, "comparacion_config.json")
