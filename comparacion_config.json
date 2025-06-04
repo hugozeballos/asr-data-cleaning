@@ -4,7 +4,7 @@
     "thresholds": [0.1, 0.3, 0.5, 1, 2, 5, 10],
     "test_percent": 0.05,
 
-    "run_name": "Comparation_therehold_cleaning_large",
+    "run_name": "Comparation_therehold_cleaning_small",
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
