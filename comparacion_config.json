@@ -1,14 +1,14 @@
 {
-    "model_name": "openai/whisper-large-v3-turbo",
+    "model_name": "openai/whisper-tiny",
     "model_filter_name": "tiny",
-    "thresholds": [0.05, 0.1, 0.5, 1, 5, 10],
+    "thresholds": [0.1, 0.3, 0.5, 1, 2, 5, 10],
     "test_percent": 0.05,
 
     "run_name": "Comparation_therehold_cleaning_tiny",
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
-    "batch_size": 1,
+    "batch_size": 16,
     "eval_batch_size": 4,
     "gradient_accumulation_steps": 2,
     "learning_rate": 5e-5,
