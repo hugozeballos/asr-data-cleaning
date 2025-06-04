@@ -8,7 +8,7 @@
     "dataset_name": "HugoZeballos/original-audio-dataset-with-inferencesofwhysper-and-metrics",
 
   
-    "batch_size": 32,
+    "batch_size": 1,
     "eval_batch_size": 4,
     "gradient_accumulation_steps": 2,
     "learning_rate": 5e-5,
