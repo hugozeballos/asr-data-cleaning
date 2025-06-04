@@ -29,6 +29,7 @@ model_name = cfg["model_name"]
 thresholds = cfg["thresholds"]
 cer_path = cfg["cer_records_path"]
 test_percent = cfg.get("test_percent", 0.05)
+model_filter_name = cfg.get["model_filter_name"]
 
 # 2. Leer CERs
 with open(cer_path) as f:
@@ -134,7 +135,7 @@ for thr in thresholds:
         cer_global_scores.append((thr, cer_global))
 
         # 6.6 Guardar métricas
-        eval_dir = os.path.join("comparacion", model_name, f"threshold_{thr}")
+        eval_dir = os.path.join("comparacion", model_name, model_filter_name, f"threshold_{thr}")
         os.makedirs(eval_dir, exist_ok=True)
 
         with open(os.path.join(eval_dir, "eval_por_muestra.json"), "w") as f:
@@ -155,7 +156,7 @@ plt.plot(ths, global_vals, marker='o')
 plt.xlabel("Threshold CER")
 plt.ylabel("CER Global")
 plt.title(f"CER global vs Threshold ({model_name})")
-scatter_path = os.path.join("comparacion", model_name, "scatter.png")
+scatter_path = os.path.join("comparacion", model_name, model_filter_name, "scatter.png")
 plt.savefig(scatter_path)
 mlflow.log_artifact(scatter_path)
 
@@ -167,7 +168,7 @@ plt.boxplot(data, labels=[str(t) for t in ths])
 plt.xlabel("Threshold")
 plt.ylabel("CER por muestra")
 plt.title(f"Distribución de CERs por umbral ({model_name})")
-boxplot_path = os.path.join("comparacion", model_name, "boxplot.png")
+boxplot_path = os.path.join("comparacion", model_name, model_filter_name, "boxplot.png")
 plt.savefig(boxplot_path)
 mlflow.log_artifact(boxplot_path)
 
