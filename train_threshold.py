@@ -29,7 +29,7 @@ model_name = cfg["model_name"]
 thresholds = cfg["thresholds"]
 cer_path = cfg["cer_records_path"]
 test_percent = cfg.get("test_percent", 0.05)
-model_filter_name = cfg.get["model_filter_name"]
+model_filter_name = cfg["model_filter_name"]
 
 # 2. Leer CERs
 with open(cer_path) as f:

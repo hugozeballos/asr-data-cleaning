@@ -1,5 +1,5 @@
 {
-    "model_name": "openai/whisper-large-v3-turbo",
+    "model_name": "openai/whisper-tiny",
     "model_filter_name": "large",
     "thresholds": [0.1, 0.3, 0.5, 1, 2, 5, 10],
     "test_percent": 0.05,
