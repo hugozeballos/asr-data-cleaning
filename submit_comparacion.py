@@ -69,7 +69,7 @@ torchrun \
   --nnodes=1 \
   --nproc_per_node={gpus} \
   --rdzv_backend=static \
-  --rdzv_endpoint=localhost:12341 \
+  --rdzv_endpoint=localhost:12342 \
   train_threshold.py --config_path {copied_config_path}
 
 rm -rf /home/$USER/.cache/torch
