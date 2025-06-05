@@ -10,6 +10,7 @@ Author: [Your Name or Lab]
 
 import io
 import json
+import os
 import numpy as np
 import torch
 import soundfile as sf
@@ -18,6 +19,8 @@ from datasets import load_dataset, concatenate_datasets
 from dataclasses import dataclass
 from typing import Any, Dict
 from tqdm.auto import tqdm
+
+cache_dir="~/storage/asr-data-cleaning/datasets_cache"
 
 
 def decode_audio(audio_bytes):
@@ -75,8 +78,9 @@ def load_datasets():
     Returns:
         Tuple of (train_dataset, validation_dataset), each with essential fields only.
     """
+    cache_dir = os.path.expanduser("~/storage/asr-data-cleaning/datasets_cache")
     dataset_name = cfg.get("dataset_name")
-    dataset = load_dataset(dataset_name)    
+    dataset = load_dataset(dataset_name, cache_dir=cache_dir)    
     train_dataset = dataset["train"]
     val_dataset = dataset["validation"]
 
