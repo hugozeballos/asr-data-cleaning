@@ -61,7 +61,7 @@ for thr in thresholds:
     run_name = f"{model_name}_threshold_{thr}"
 
     # ✅ Establecer URI y experimento ANTES de iniciar la run
-    mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+    mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
     mlflow.set_experiment("whisper_cer_threshold_exploration")
 
     with mlflow.start_run(run_name=run_name):

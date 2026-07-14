@@ -289,7 +289,7 @@ def main():
 
     for iteration in range(num_iterations):
         print(f"\n=== Iteración {iteration+1}: Entrenamiento con {len(train_dataset)} muestras ===")
-        mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+        mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
         mlflow.set_experiment("whisper-validate-data")
 
         trainer = Seq2SeqTrainer(

@@ -166,7 +166,7 @@ def train(cfg):
         print(f"\n🏋️ Training on Fold {fold_idx+1}...")
         # ---------- MLflow handled only by rank-0 -----------------------------------
         if is_rank0():
-            mlflow.set_tracking_uri("https://mlflow-server-muiutdydxq-uc.a.run.app/")
+            mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
             mlflow.set_experiment(cfg["mlflow_experiment"])
             run_ctx = mlflow.start_run(run_name=f"fold_{fold_idx + 1}")   # returns a context manager
         else:
